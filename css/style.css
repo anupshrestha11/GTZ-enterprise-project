@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background: #086972;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.box-wrapper {
+  width: 100%;
+  background-color: #17b978;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box-wrapper .boxes {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-wrapper .boxes .box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 6px 12px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 12px 8px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+  height: calc(200px - 2em);
+  padding: 2em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background: #a7ff83;
+  text-align: center;
+  cursor: pointer;
+}
+
+.box-wrapper .boxes .box h3 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.box-wrapper .boxes .box:hover {
+  opacity: 0.6;
+}
+
+.box-wrapper .boxes .box:active {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+@media (min-width: 500px) {
+  header h1 {
+    font-size: 45px;
+  }
+  .box-wrapper {
+    padding: 2em auto;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  header {
+    margin: 4em 0;
+  }
+  header h1 {
+    font-size: 45px;
+    font-weight: 900;
+  }
+  .box-wrapper {
+    padding: 2em 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    height: 100vh;
+  }
+  header {
+    top: 0;
+    margin: 1em 0;
+  }
+  header h1 {
+    font-size: 65px;
+    font-weight: 900;
+  }
+  .box-wrapper .boxes {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .box-wrapper .boxes .box {
+    height: 250px;
+  }
+  .box-wrapper .boxes .box h3 {
+    font-size: 35px;
+    font-weight: 800;
+  }
+}
+/*# sourceMappingURL=style.css.map */
