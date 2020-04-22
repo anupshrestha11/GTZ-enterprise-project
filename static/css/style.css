@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: calc(100vh - 6em);
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  padding: 2em 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+header img {
+  width: 150px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 10em;
+  top: 2em;
+}
+
+header h1 {
+  color: #0a569a;
+  font-family: 'Poppins';
+  font-size: 64px;
+  line-height: 96px;
+  font-weight: bolder;
+}
+
+.box-wrapper {
+  background: rgba(12, 138, 252, 0.54);
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.box-wrapper .boxes {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.box-wrapper .boxes .box {
+  width: 300px;
+  height: 250px;
+  background: #0a569a;
+  border-radius: 20px;
+  margin: 3em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 2em 1em;
+  position: relative;
+  cursor: pointer;
+}
+
+.box-wrapper .boxes .box h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 800;
+}
+
+.box-wrapper .boxes .box:hover {
+  background-color: #0a567a;
+}
+
+.box-wrapper .boxes .box:active {
+  -webkit-transform: translateY(1%);
+          transform: translateY(1%);
+}
+
+@media (max-width: 1300px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header h1 {
+    display: none;
+  }
+  header img {
+    width: 15em;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 2em;
+    top: 0;
+    left: 0;
+  }
+  .box-wrapper {
+    height: auto;
+  }
+  .box-wrapper .boxes .box {
+    width: 250px;
+    margin: 1em auto;
+  }
+  .box-wrapper .boxes .box h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  header img {
+    width: 10em;
+    margin: 0;
+  }
+  .box-wrapper .boxes {
+    width: 90%;
+  }
+  .box-wrapper .boxes .box {
+    width: 200px;
+    height: 200px;
+    margin: 1em 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  header img {
+    padding: 1em;
+    margin: 0;
+  }
+  .box-wrapper .boxes .box {
+    width: 100%;
+    height: 100px;
+  }
+  .box-wrapper .boxes .box h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box-wrapper .boxes .box h3 {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
