@@ -24,8 +24,10 @@ body {
 header {
   width: 100%;
   height: 20%;
+  box-sizing: border-box;
   text-align: center;
   padding: 2em 2em;
+  margin: 0 0 2em;
   align-items: center;
   text-transform: uppercase;
   position: relative;
@@ -35,14 +37,17 @@ header {
     margin-bottom: 20px;
     position: absolute;
     left: 10em;
-    top: 2em;
+    top: 1em;
   }
   h1 {
+    display: block;
+    position: relative;
     color: $headerFontColor;
     font-family: 'Poppins';
     font-size: 64px;
     line-height: 96px;
     font-weight: bolder;
+    margin-bottom: 2em;
   }
 }
 
@@ -54,6 +59,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 450px;
   .boxes {
     width: 80%;
     margin: auto;
@@ -82,6 +88,7 @@ header {
       }
       &:hover {
         background-color: $boxhoverColor;
+        transition: background 0.5s ease;
       }
       &:active {
         transform: translateY(1%);

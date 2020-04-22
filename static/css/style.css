@@ -20,8 +20,11 @@ body {
 header {
   width: 100%;
   height: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
   padding: 2em 2em;
+  margin: 0 0 2em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -34,15 +37,18 @@ header img {
   margin-bottom: 20px;
   position: absolute;
   left: 10em;
-  top: 2em;
+  top: 1em;
 }
 
 header h1 {
+  display: block;
+  position: relative;
   color: #0a569a;
   font-family: 'Poppins';
   font-size: 64px;
   line-height: 96px;
   font-weight: bolder;
+  margin-bottom: 2em;
 }
 
 .box-wrapper {
@@ -59,6 +65,7 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  min-height: 450px;
 }
 
 .box-wrapper .boxes {
@@ -106,6 +113,8 @@ header h1 {
 
 .box-wrapper .boxes .box:hover {
   background-color: #0a567a;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
 }
 
 .box-wrapper .boxes .box:active {
