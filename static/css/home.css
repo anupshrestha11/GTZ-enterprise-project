@@ -32,10 +32,9 @@ body {
 }
 
 .logo {
-  width: 50px;
+  width: 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0.5em 0.5em;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
