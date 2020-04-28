@@ -17,7 +17,7 @@ registerform.addEventListener('submit', (e) => {
     return false;
   }
   if (password.value.length < 6) {
-    message('Password must be atleast of 8 characters', e);
+    message('Password must be atleast of 6 characters', e);
     return false;
   }
   if (password.value !== rePassword.value) {
