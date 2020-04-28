@@ -20,12 +20,12 @@ registerform.addEventListener('submit', (e) => {
     message('Password must be atleast of 8 characters', e);
     return false;
   }
-  if (password.value === rePassword.value) {
+  if (password.value !== rePassword.value) {
     message("Password don't Match", e);
     return false;
   }
   if (!validateNumber(mobileNumber.value)) {
-    message('Enter valid Mobile Number');
+    message('Enter valid Mobile Number',e);
     return false;
   }
 });
