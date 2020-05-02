@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GTZ Online Shop</title>
 
     <!-- ? favicon -->
@@ -47,121 +47,136 @@
 
     <!--? custom css  -->
     <link rel="stylesheet" href="./static/css/home.css" />
-</head>
-<body>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="dropdown">
+        <button
+          class="btn"
+          type="button"
+          id="dropdowncategory"
+          data-toggle="dropdown"
+        >
+          <span class="material-icons menu">menu</span>
+        </button>
+        <!-- ? menu of category -->
+        <ul class="dropdown-menu" aria-labelled-by="dropdowncategory">
+          <li><a href="#" class="category-name btn">Category #1</a></li>
+          <li><a href="#" class="category-name btn">Category #2</a></li>
+          <li><a href="#" class="category-name btn">Category #3</a></li>
+          <li><a href="#" class="category-name btn">Category #4</a></li>
+          <li><a href="#" class="category-name btn">Category #5</a></li>
+          <li><a href="#" class="category-name btn">Category #6</a></li>
+        </ul>
+      </div>
+      <img src="./static/images/GTZ-logo.png" alt="" class="logo" />
 
-    <header class="contianer-fluid">
-        <div class="dropdown">
-          <button
-            class="btn"
-            type="button"
-            id="dropdowncategory"
-            data-toggle="dropdown"
-          >
-            <span class="material-icons menu">menu</span>
-          </button>
-          <!-- ? menu of category -->
-          <ul class="dropdown-menu" aria-labelled-by="dropdowncategory">
-            <li><a href="#" class="category-name btn">Category #1</a></li>
-            <li><a href="#" class="category-name btn">Category #2</a></li>
-            <li><a href="#" class="category-name btn">Category #3</a></li>
-            <li><a href="#" class="category-name btn">Category #4</a></li>
-            <li><a href="#" class="category-name btn">Category #5</a></li>
-            <li><a href="#" class="category-name btn">Category #6</a></li>
-          </ul>
-        </div>
-        <img src="./static/images/GTZ-logo.png" alt="" class="logo" />
-  
-        <!-- ? search box -->
-        <div class="search-box">
-          <!-- <form action="#"> -->
-          <input type="text" name="search" placeholder="Search..." id="search" />
-          <button class="btn">
-            <span class="material-icons search-icon">
-              search
-            </span>
-          </button>
-          <!-- </form> -->
-        </div>
-  
+      <!-- ? search box -->
+      <div class="search-box">
+        <!-- <form action="#"> -->
+        <input type="text" name="search" placeholder="Search..." id="search" />
         <button class="btn">
-          <span class="material-icons favorite-icon">
-            favorite
+          <span class="material-icons search-icon">
+            search
           </span>
         </button>
-        <button class="btn">
-          <span class="material-icons shopping-cart-icon">
-            shopping_cart
-          </span>
-        </button>
-        <nav>
-          <ul class="nav-links">
-            <li class="nav-item"><a href="#" class="btn">FAQ</a></li>
-            <li class="nav-item"><a href="#" class="btn">Login</a></li>
-            <li class="nav-item"><a href="#" class="btn">Sell</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <!-- </form> -->
+      </div>
+
+      <button class="btn">
+        <span class="material-icons favorite-icon">
+          favorite
+        </span>
+        <sup class="">12</sup>
+      </button>
+      <button class="btn">
+        <span class="material-icons shopping-cart-icon">
+          shopping_cart
+        </span>
+        <sup class="">13</sup>
+      </button>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#" class="btn">FAQ</a></li>
+        <li class="nav-item"><a href="#" class="btn">Login</a></li>
+        <li class="nav-item"><a href="#" class="btn">Sell</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </header>
+    <!-- ? end of header -->
+
+    <!-- ? product section -->
+    <section class="product container">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12">
+          <!-- TODO add product image and style -->
+          <img src="" alt="" />
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <!-- TODO product detail and style -->
+          <h3>Product title</h3>
+          <p>product added by</p>
+          <p>product Description</p>
+        </div>
+      </div>
+    </section>
+    <!-- ? end of product section -->
+
+    <!-- ? footer section -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>Get to know us</h3>
+            <ul>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>About Us</li>
+              <li>Help Center</li>
+              <li>Complain</li>
+              <li>Delivery</li>
+            </ul>
           </div>
-        </nav>
-      </header>
-
-
-
-      <!-- ? footer section -->
-      <footer class="footer bg-light">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Get to know us</h3>
-              <ul>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>About Us</li>
-                <li>Help Center</li>
-                <li>Complain</li>
-                <li>Delivery</li>
-              </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Payment Methods</h3>
-              <ul>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>About Us</li>
-                <li>Help Center</li>
-                <li>Complain</li>
-                <li>Delivery</li>
-              </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Delivery</h3>
-              <ul>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>About Us</li>
-                <li>Help Center</li>
-                <li>Complain</li>
-                <li>Delivery</li>
-              </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <h3>Social Network</h3>
-              <ul>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>About Us</li>
-                <li>Help Center</li>
-                <li>Complain</li>
-                <li>Delivery</li>
-              </ul>
-            </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>Payment Methods</h3>
+            <ul>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>About Us</li>
+              <li>Help Center</li>
+              <li>Complain</li>
+              <li>Delivery</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>Delivery</h3>
+            <ul>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>About Us</li>
+              <li>Help Center</li>
+              <li>Complain</li>
+              <li>Delivery</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>Social Network</h3>
+            <ul>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>About Us</li>
+              <li>Help Center</li>
+              <li>Complain</li>
+              <li>Delivery</li>
+            </ul>
           </div>
         </div>
-      </footer>
-     <!-- ? custom js for bootstrap carousel and owl carousel -->
-     <script src="./static/js/script.js"></script>
-</body>
+      </div>
+    </footer>
+    <!-- ? custom js for bootstrap carousel and owl carousel -->
+    <script src="./static/js/script.js"></script>
+  </body>
 </html>

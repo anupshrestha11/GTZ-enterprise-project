@@ -171,8 +171,8 @@ header .burger {
 }
 
 header .burger div {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   width: 25px;
   height: 3px;
   margin: 5px;
@@ -391,6 +391,11 @@ footer .container .row .col-md-3 li:hover {
   html,
   body {
     overflow-x: hidden;
+  }
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   header .nav-links {
     height: 8vh;

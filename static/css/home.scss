@@ -144,7 +144,7 @@ header {
   .burger {
     display: none;
     div {
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       width: 25px;
       height: 3px;
       margin: 5px;
@@ -356,6 +356,8 @@ footer {
     overflow-x: hidden;
   }
   header {
+    position: sticky;
+    top:0;
     .nav-links {
       height: 8vh;
       position: absolute;
