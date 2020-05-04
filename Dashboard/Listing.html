@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing Products | GTZ Online Shop</title>
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../static/images/GTZ-logo.png"
+    />
+    <!--? bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--? bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--? material icons link  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- ? custom css for dashboard -->
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="../static/images/profile_picture.png"
+          class="profile-picture"
+          alt=""
+        />
+        <div class="profile-detail">
+          <h5>John Doe</h5>
+          <small>johndoe@gmail.com</small>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="material-icons notification">
+          notifications_none
+          <sup></sup>
+        </span>
+
+        <a href="#" class="btn btn-danger btn-logout">
+          <span class="logout-text">Logout</span>
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+      </div>
+    </header>
+    <aside>
+      <nav>
+        <div class="btn-toggle-menu">
+          <span class="material-icons">
+            menu
+          </span>
+          <img
+            src="../static/images/GTZ-logo.png"
+            class="logo"
+            alt="GTZ logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li class="">
+            <a href="Dashboard.html" class="nav-item btn">
+              <span class="material-icons">
+                dashboard
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="Listing.html" class="nav-item btn">
+              <span class="material-icons">
+                shop
+              </span>
+              <span class="nav-text">Listing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                book
+              </span>
+              <span class="nav-text">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                account_circle
+              </span>
+              <span class="nav-text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                card_giftcard
+              </span>
+              <span class="nav-text">Coupons</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="main">
+      <!-- ? search bar -->
+      <div class="bar-wrapper">
+        <form action="" class="search-wrapper form-inline">
+          <div class="form-group">
+            <select
+              name="search-option"
+              id="search-option"
+              class="form-control"
+            >
+              <option value="option-1">option 1</option>
+              <option value="option-2">option 2</option>
+              <option value="option-3">option 3</option>
+              <option value="option-4">option 4</option>
+              <option value="option-5">option 5</option>
+            </select>
+          </div>
+          <div class="form-group search-bar">
+            <input type="text" name="search" placeholder="Search" />
+            <button type="submit" class="btn btn-search">
+              <span class="material-icons">
+                search
+              </span>
+            </button>
+          </div>
+        </form>
+        <a href="#" class="btn btn-add-product">
+          <span class="material-icons">
+            add
+          </span>
+          Product
+        </a>
+      </div>
+      <!-- ? product Listing -->
+      <div class="products-listing">
+        <div class="products-view">
+          <ul class="product-view-opts">
+            <li class="view-opt active">All</li>
+            <li class="view-opt">Live</li>
+            <li class="view-opt"><span>Out-of-Stock</span></li>
+            <li class="view-opt">Disabled</li>
+          </ul>
+          <div class="form-inline sorting">
+            <label for="sort">Sort by: </label>
+            <select name="sort" id="sort" class="form-control">
+              <option value="Newest">Newest</option>
+              <option value="Oldest">Oldest</option>
+            </select>
+          </div>
+        </div>
+        <div class="listing-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <label for="all-check" class="checkbox-container">
+                    <input
+                      type="checkbox"
+                      class="checkbox"
+                      name="all-check"
+                      id="all-check"
+                    />
+                    <div class="check-marker"></div>
+                  </label>
+                </th>
+                <th></th>
+                <th>Product Information</th>
+                <th>Listing Information</th>
+                <th></th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="check-1" class="checkbox-container">
+                    <input
+                      type="checkbox"
+                      class="checkbox"
+                      name="check-1"
+                      id="check-1"
+                    />
+                    <div class="check-marker"></div>
+                  </label>
+                </td>
+                <td>
+                  <img src="../static/images/op8.jpg" alt="" />
+                </td>
+                <td>
+                  <p class="product-title">Oneplus 8 White 128GB Rom 8GB Ram</p>
+                  <p class="product-id">
+                    <span class="label-text">Product Id: </span>123456789
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Selling Price: </span>Rs.34,0000
+                  </p>
+                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
+                  <p><span class="label-text">Quantity: </span>100 pcs</p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Days to Dispatch: </span>10 day
+                  </p>
+                  <p><span class="label-text">Return Accepted: </span>Yes</p>
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-active btn-secondary">
+                    Active
+                  </button>
+                </td>
+                <td class="text-center">
+                  <span class="material-icons">
+                    delete
+                  </span>
+                  <span class="material-icons">
+                    edit
+                  </span>
+                  <span class="material-icons">
+                    more_vert
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check-2" class="checkbox-container">
+                    <input
+                      type="checkbox"
+                      class="checkbox"
+                      name="check-2"
+                      id="check-2"
+                    />
+                    <div class="check-marker"></div>
+                  </label>
+                </td>
+                <td>
+                  <img src="../static/images/op8.jpg" alt="" />
+                </td>
+                <td>
+                  <p class="product-title">Oneplus 8 White 128GB Rom 8GB Ram</p>
+                  <p class="product-id">
+                    <span class="label-text">Product Id: </span>123456789
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Selling Price: </span>Rs.34,0000
+                  </p>
+                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
+                  <p><span class="label-text">Quantity: </span>100 pcs</p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Days to Dispatch: </span>10 day
+                  </p>
+                  <p><span class="label-text">Return Accepted: </span>Yes</p>
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-active btn-secondary">
+                    Active
+                  </button>
+                </td>
+                <td class="text-center">
+                  <span class="material-icons">
+                    delete
+                  </span>
+                  <span class="material-icons">
+                    edit
+                  </span>
+                  <span class="material-icons">
+                    more_vert
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- ? end of product listing -->
+    </section>
+    <script>
+      $(".view-opt").click((e) => {
+        console.log("object");
+        const viewOpt = e.target;
+        const viewOpts = document.querySelectorAll(".view-opt");
+        if (!viewOpt.classList[1]) {
+          viewOpts.forEach((item) => {
+            item.classList.remove("active");
+          });
+          viewOpt.classList.add("active");
+        }
+      });
+      $('input[name="all-check"]').click(() => {
+        if ($('input[name="all-check"]').prop("checked") === true) {
+          $('input[name^="check"]').prop("checked", true);
+        } else if ($('input[name="all-check"]').prop("checked") === false) {
+          $('input[name^="check"]').prop("checked", false);
+        }
+      });
+      $('input[name^="check"]').click((e) => {
+        if (
+          $(`#${e.target.id}`).prop("checked") === false &&
+          $('input[name="all-check"]').prop("checked") === true
+        ) {
+          $('input[name="all-check"]').prop("checked", false);
+        }
+      });
+    </script>
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>

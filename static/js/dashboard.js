@@ -1,4 +1,4 @@
-// TODO make a browser responsive
+// TODO make a browser responsive for other browser for grid animation
 
 //? for mozilla
 const body = document.querySelector("body");
@@ -21,5 +21,3 @@ document.querySelector(".btn-toggle-menu").addEventListener(
   },
   true
 );
-
-//? for other browsers
