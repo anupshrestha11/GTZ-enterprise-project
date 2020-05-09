@@ -84,7 +84,7 @@
           />
         </div>
         <ul class="nav-links">
-          <li class="active">
+          <li>
             <a href="Dashboard.html" class="nav-item btn">
               <span class="material-icons">
                 dashboard
@@ -93,7 +93,7 @@
             </a>
           </li>
 
-          <li class="">
+          <li class="active">
             <a href="Listing.html" class="nav-item btn">
               <span class="material-icons">
                 shop
@@ -129,11 +129,58 @@
       </nav>
     </aside>
 
-    <section class="main text-justify">
-      <div>
-        <h3 class="text-center">Welcome to GTZ Online Shop</h3>
-      </div>
+    <section class="main container">
+      <h3>Add Product</h3>
+      <section class="form-block">
+        <div class="form-head">
+          What You're Selling
+        </div>
+        <form action="#" method="post" class="form">
+          <div class="form-group">
+            <label for="productName">Product Name: </label>
+            <input
+              type="text"
+              name="productName"
+              id="productName"
+              class="form-control"
+            />
+            <span class="input-limit">0/255</span>
+          </div>
+          <div class="form-group">
+            <label for="category">Category: </label>
+            <select name="category" id="category" class="form-control">
+              <option value="">Select Product Category</option>
+              <option value="">category 1</option>
+              <option value="">category 2</option>
+              <option value="">category 3</option>
+              <option value="">category 4</option>
+              <option value="">category 5</option>
+              <option value="">category 6</option>
+              <option value="">category 7</option>
+              <option value="">category 8</option>
+              <option value="">category 9</option>
+              <option value="">category 10</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand: </label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="model">Model: </label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-head">
+            <p>Basic Information</p>
+          </div>
+          <div class="form-group">
+            <label for="editor"> Highlits</label>
+            <textarea name="" id="editor"></textarea>
+          </div>
+        </form>
+      </section>
     </section>
+    <script src="../ckeditor5/build/ckeditor.js"></script>
 
     <script src="../static/js/dashboard.js"></script>
   </body>

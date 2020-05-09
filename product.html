@@ -45,6 +45,9 @@
     <!-- ? jquery script-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
+    <!-- ? elevate js for product zoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+
     <!--? custom css  -->
     <link rel="stylesheet" href="./static/css/home.css" />
   </head>
@@ -107,19 +110,68 @@
       </div>
     </header>
     <!-- ? end of header -->
+    <div class="directory container">
+      <a href="#">Home</a> / <a href="#">Category</a> /
+      <a href="#">Sub-category</a> / <a href="#">Product-Name</a>
+    </div>
 
     <!-- ? product section -->
-    <section class="product container">
+    <section class="product container-fluid w-75">
       <div class="row">
-        <div class="col-lg-6 col-md-4 col-sm-12">
-          <!-- TODO add product image and style -->
-          <img src="" alt="" />
+        <div class="6 col-md-4 col-sm-12 image-box">
+          <img src="./static/images/laptop.jpg" alt="" id="product-name" />
         </div>
-        <div class="col-lg-6 col-md-8 col-sm-12">
+        <div class="col-md-8 col-sm-12 product-detail">
           <!-- TODO product detail and style -->
-          <h3>Product title</h3>
-          <p>product added by</p>
-          <p>product Description</p>
+          <h3 class="product-name">
+            Lenovo Flex 14 2-in-1 Convertible Laptop, 14 Inch FHD Touchscreen
+            Display, AMD Ryzen 5 3500U Processor, 12GB DDR4 RAM, 256GB NVMe SSD,
+            Windows 10, 81SS000DUS, Black, Pen Included 4.4 out of 5 stars 1,439
+          </h3>
+          <p>by <a href="#">Seller-name</a></p>
+          <p class="rating">
+            <span class="material-icons">
+              star star star star_half star_outline
+            </span>
+            no rating
+          </p>
+          <div class="buttons-div">
+            <button class="btn btn-success">Add to Cart</button>
+            <button class="btn btn-success">Buy Now</button>
+            <span class="material-icons favorite">
+              favorite
+            </span>
+          </div>
+          <hr />
+          <p class="product-state">In Stock</p>
+          <div class="product-highlight">
+            <ul class="highlight-list">
+              <li class="hightlight-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                natus corporis dolore eos maiores sed autem consequatur, aut
+                laudantium sunt consectetur repudiandae dignissimos quis, fugit
+                molestiae! Quisquam inventore voluptates veritatis?
+              </li>
+              <li class="hightlight-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                natus corporis dolore eos maiores sed autem consequatur, aut
+                laudantium sunt consectetur repudiandae dignissimos quis, fugit
+                molestiae! Quisquam inventore voluptates veritatis?
+              </li>
+              <li class="hightlight-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                natus corporis dolore eos maiores sed autem consequatur, aut
+                laudantium sunt consectetur repudiandae dignissimos quis, fugit
+                molestiae! Quisquam inventore voluptates veritatis?
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil fugit
+          praesentium architecto eius facere qui voluptates adipisci beatae hic,
+          aperiam cumque inventore optio sint ullam, possimus in. Quisquam,
+          optio fugit.
         </div>
       </div>
     </section>
@@ -177,6 +229,14 @@
       </div>
     </footer>
     <!-- ? custom js for bootstrap carousel and owl carousel -->
+    <script>
+      $(document).ready(function () {
+        $("#product-name").elevateZoom({
+          scrollZoom: true,
+          easing: true,
+        });
+      });
+    </script>
     <script src="./static/js/script.js"></script>
   </body>
 </html>

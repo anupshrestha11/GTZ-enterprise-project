@@ -155,7 +155,7 @@
             </button>
           </div>
         </form>
-        <a href="#" class="btn btn-add-product">
+        <a href="./AddProduct.html" class="btn btn-add-product">
           <span class="material-icons">
             add
           </span>
@@ -312,9 +312,13 @@
       <!-- ? end of product listing -->
     </section>
     <script>
-      $(".view-opt").click((e) => {
-        console.log("object");
-        const viewOpt = e.target;
+      $(".view-opt").click(onClick);
+
+      function onClick(e) {
+        let viewOpt = e.target;
+        if (e.target.tagName === "SPAN") {
+          viewOpt = viewOpt.parentNode;
+        }
         const viewOpts = document.querySelectorAll(".view-opt");
         if (!viewOpt.classList[1]) {
           viewOpts.forEach((item) => {
@@ -322,7 +326,7 @@
           });
           viewOpt.classList.add("active");
         }
-      });
+      }
       $('input[name="all-check"]').click(() => {
         if ($('input[name="all-check"]').prop("checked") === true) {
           $('input[name^="check"]').prop("checked", true);
