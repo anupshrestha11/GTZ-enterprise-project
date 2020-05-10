@@ -213,6 +213,7 @@
 
 .product .product-detail .buttons-div .btn {
   margin: 1em 0;
+  z-index: 0;
 }
 
 .product .product-detail .buttons-div span {
@@ -240,7 +241,7 @@
   text-align: justify;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;

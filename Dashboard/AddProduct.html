@@ -129,7 +129,7 @@
       </nav>
     </aside>
 
-    <section class="main container">
+    <section class="main container mb-5">
       <h3>Add Product</h3>
       <section class="form-block">
         <div class="form-head">
@@ -164,24 +164,106 @@
           </div>
           <div class="form-group">
             <label for="brand">Brand: </label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" name="brand" id="brand" />
           </div>
           <div class="form-group">
             <label for="model">Model: </label>
-            <input type="text" class="form-control" />
+            <input type="text" name="model" id="model" class="form-control" />
           </div>
           <div class="form-head">
-            <p>Basic Information</p>
+            <p>Product Information</p>
+          </div>
+          <div class="form-group mt-3">
+            <label for="">Product Images</label>
+            <input type="file" multiple class="form-control-file" />
+          </div>
+          <div class="form-group mt-3">
+            <label for="sku">SKU: </label>
+            <input type="text" name="sku" id="sku" class="form-control" />
+          </div>
+
+          <div class="ckeditor-div">
+            <label for="">Highlights: </label>
+            <div class="form-control">
+              <textarea id="highlight" name="highlight"></textarea>
+            </div>
+          </div>
+          <div class="ckeditor-div">
+            <label for="">Description: </label>
+            <div class="form-control">
+              <textarea id="description" name="description"></textarea>
+            </div>
+          </div>
+          <div class="form-group product-dimension">
+            Product Dimension:
+            <input
+              type="number"
+              name="height"
+              class="form-control ml-4 mr-2"
+              placeholder="height"
+            />
+            cm
+            <input
+              type="number"
+              name="length"
+              class="form-control ml-4 mr-2"
+              placeholder="length"
+            />
+            cm
+            <input
+              type="number"
+              name="breadth"
+              class="form-control ml-4 mr-2"
+              placeholder="breadth"
+            />
+            cm
+          </div>
+          <div class="form-group package-dimension">
+            Package Dimension:
+            <input
+              type="number"
+              name="height"
+              class="form-control ml-4 mr-2"
+              placeholder="height"
+            />
+            cm
+            <input
+              type="number"
+              name="length"
+              class="form-control ml-4 mr-2"
+              placeholder="length"
+            />
+            cm
+            <input
+              type="number"
+              name="breadth"
+              class="form-control ml-4 mr-2"
+              placeholder="breadth"
+            />
+            cm
           </div>
           <div class="form-group">
-            <label for="editor"> Highlits</label>
-            <textarea name="" id="editor"></textarea>
+            <label for="witb">What's in the box: </label>
+            <input type="text" name="witb" id="witb" class="form-control" />
+          </div>
+          <div class="form-group form-inline">
+            <label for="mrp">MRP: </label>
+            <input type="number" name="MRP" id="mrp" class="form-control" />
+            <label for="mrp">Selling Price: </label>
+            <input type="number" name="MRP" id="mrp" class="form-control" />
+          </div>
+
+          <div class="text-center mt-5">
+            <button class="btn btn-secondary mr-4">Save Draft</button>
+            <input type="submit" value="Submit" class="btn btn-success mx-4" />
+            <input type="reset" value="Cancel" class="btn btn-warning ml-4" />
           </div>
         </form>
       </section>
     </section>
-    <script src="../ckeditor5/build/ckeditor.js"></script>
 
+    <!-- ? ckeditor 5 libary -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
     <script src="../static/js/dashboard.js"></script>
   </body>
 </html>

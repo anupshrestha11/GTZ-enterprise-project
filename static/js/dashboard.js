@@ -22,44 +22,11 @@ document.querySelector(".btn-toggle-menu").addEventListener(
   true
 );
 
-//! ckeditor
-
-ClassicEditor.create(document.querySelector("#editor"), {
-  toolbar: {
-    items: [
-      "bold",
-      "italic",
-      "link",
-      "bulletedList",
-      "numberedList",
-      "|",
-      "indent",
-      "outdent",
-      "|",
-      "blockQuote",
-      "insertTable",
-      "undo",
-      "redo",
-      "alignment",
-    ],
-  },
-  language: "en",
-  image: {
-    toolbar: ["imageTextAlternative", "imageStyle:full", "imageStyle:side"],
-  },
-  table: {
-    contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
-  },
-  licenseKey: "",
-})
-  .then((editor) => {
-    window.editor = editor;
-  })
-  .catch((error) => {
-    console.error("Oops, something gone wrong!");
-    console.error(
-      "Please, report the following error in the https://github.com/ckeditor/ckeditor5 with the build id and the error stack trace:"
-    );
-    console.warn("Build id: 2ktte3oxf21f-4j0omid7h9rd");
+//? ckeditor 5
+const ckeditor = (id) => {
+  ClassicEditor.create(document.querySelector(`#${id} `)).catch((error) => {
     console.error(error);
   });
+};
+ckeditor("highlight");
+ckeditor("description");
