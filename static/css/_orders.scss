@@ -1,0 +1,77 @@
+.order-listing {
+  .heading {
+    font-weight: bolder;
+    margin: 1em 0;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+  }
+  .table {
+    thead {
+      tr {
+        th {
+          &:nth-of-type(1) {
+            text-align: center;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          box-sizing: border-box;
+          padding: 1em;
+          font-size: 14px;
+          &:nth-of-type(1) {
+            text-align: center;
+          }
+          &:nth-of-type(2) {
+            max-width: 250px;
+            // text-align: justify;
+            // text-overflow: ellipsis;
+            // overflow: hidden;
+            white-space: wrap;
+          }
+          .btn {
+            font-size: 90%;
+            margin: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .order-listing {
+    thead {
+      display: none;
+    }
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100% !important;
+    }
+    td {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &:nth-of-type(1) {
+        background-color: #e1e1e1;
+        justify-content: center;
+        font-weight: bold;
+      }
+      &:nth-of-type(2) {
+        max-width: 100% !important;
+        font-weight: bold;
+      }
+      @for $i from 3 through 5 {
+        &:nth-of-type(#{$i})::before {
+          content: attr(data-name);
+          font-weight: bold;
+          letter-spacing: 0.01rem;
+        }
+      }
+    }
+  }
+}

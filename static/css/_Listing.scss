@@ -165,7 +165,7 @@
       }
     }
   }
-  table {
+  .listing-table table {
     font-size: 80%;
     thead {
       tr {
@@ -187,7 +187,7 @@
           }
           .btn {
             font-size: 90%;
-          }
+          } 
           span.material-icons {
             display: block;
             margin: 0.5em auto;
@@ -202,7 +202,7 @@
   .products-view {
     font-size: 80%;
   }
-  table {
+  .listing-table table {
     font-size: 80%;
     th {
     }
@@ -250,7 +250,7 @@
       }
     }
   }
-  .table {
+  .listing-table .table {
     width: 100vw;
     thead {
       display: none;

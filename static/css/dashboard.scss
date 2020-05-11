@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import "./Listing";
 @import "./addproduct";
+@import "./orders";
 
 //?color scheme
 $bgColor: #fff;
@@ -303,6 +304,7 @@ section.main {
 
 @media screen and (max-width: 700px) {
   body {
+    overflow-x: hidden;
     grid-template-rows: $headerHeight auto $headerHeight;
     grid-template-columns: auto;
     grid-template-areas:
@@ -312,6 +314,7 @@ section.main {
   }
   header {
     padding: 0.5em 0.5em;
+    width: 100vw;
     div.header-left {
       .profile-picture {
         margin: 5px;
@@ -381,6 +384,9 @@ section.main {
         }
       }
     }
+  }
+  section.main {
+    width: 100vw;
   }
   .expand-aside {
     animation: none;

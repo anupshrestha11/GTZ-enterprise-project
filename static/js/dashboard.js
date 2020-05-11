@@ -22,6 +22,19 @@ document.querySelector(".btn-toggle-menu").addEventListener(
   true
 );
 
+const ellipsis = (item) => {
+  $(`.${item}`).html((index, currentText) => {
+    let maxLength = $(`.${item}`).attr("data-maxlength");
+    if (currentText.length >= maxLength) {
+      return currentText.substr(0, maxLength) + "...";
+    } else {
+      return currentText;
+    }
+  });
+};
+
+ellipsis("ellipsis");
+
 //? ckeditor 5
 const ckeditor = (id) => {
   ClassicEditor.create(document.querySelector(`#${id} `)).catch((error) => {

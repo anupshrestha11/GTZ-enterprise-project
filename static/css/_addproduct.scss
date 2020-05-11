@@ -62,6 +62,7 @@
         margin: 1em 0;
         .ck-editor__editable:not(.ck-editor__nested-editable) {
           height: calc(300px - 38.5px);
+          width: inherit;
         }
       }
     }
