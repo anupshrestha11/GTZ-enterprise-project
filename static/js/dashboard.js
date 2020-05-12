@@ -35,11 +35,75 @@ const ellipsis = (item) => {
 
 ellipsis("ellipsis");
 
-//? ckeditor 5
-const ckeditor = (id) => {
-  ClassicEditor.create(document.querySelector(`#${id} `)).catch((error) => {
-    console.error(error);
-  });
+const productForm = document.forms["productForm"];
+const formData = {
+  productName: productForm["productName"],
+  category: productForm["category"],
+  productImages: productForm["productImages"],
+  sku: productForm["sku"],
+  highlight: productForm["highlight"],
+  description: productForm["description"],
+  sellingPrice: productForm["sellingPrice"],
+  daysToDispatch: productForm["daysToDispatch"],
+  returnAccept: productForm["returnAccept"],
+  ruternDays: productForm["returnDays"],
+
+  //Todo scale select problem at last
+  // quantity: productForm["quantity"],
+  // quantityScale: productForm["quantityScale"],
 };
-ckeditor("highlight");
-ckeditor("description");
+const validateProductForm = (e) => {
+  let i = 1;
+  const checknull = (name) => {
+    if (name.value === null || name.value === undefined || name.value === "") {
+      name.focus();
+      name.style.boxShadow = "none";
+      name.style.border = "1px solid red";
+      return true;
+    }
+    return false;
+  };
+  const checkSelect = (name) => {
+    if (
+      name.value === null ||
+      name.value === undefined ||
+      name.value === "" ||
+      name.value === "0"
+    ) {
+      name.focus();
+      return true;
+    }
+  };
+
+  if (
+    checknull(formData.productName) ||
+    checkSelect(formData.category) ||
+    checknull(formData.sku) ||
+    checknull(formData.highlight) ||
+    checknull(formData.description) ||
+    checknull(formData.sellingPrice) ||
+    checknull(formData.daysToDispatch) ||
+    checknull(formData.ruternDays)
+  ) {
+    e.preventDefault();
+    document.querySelector(".error-msg").textContent =
+      "All Fields Indicated '*' Must Be Filled";
+    document.querySelector(".error-msg").classList.add("alert");
+    document.querySelector(".error-msg").classList.add("alert-danger");
+    document.querySelector(".error-msg").classList.add("text-center");
+    return false;
+  }
+};
+productForm.addEventListener("submit", validateProductForm);
+
+productForm.returnAccept.addEventListener("change", () => {
+  if (productForm.returnAccept.value === "yes") {
+    document.querySelector("#returnDays").disabled = false;
+    document.querySelector("#returnDays").style.backgroundColor = "#fff";
+  } else {
+    document.querySelector("#returnDays").disabled = true;
+    document.querySelector("#returnDays").style.backgroundColor = "#c9c9c9";
+  }
+});
+
+document.querySelector("#returnDays").style.backgroundColor = "#c9c9c9";

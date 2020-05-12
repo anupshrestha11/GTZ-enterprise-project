@@ -66,12 +66,16 @@
         }
       }
     }
-    .product-dimension,
-    .package-dimension {
-      .form-control {
-        width: 150px;
-        font-size: 14px;
+    label {
+      span.required {
+        color: red;
+        font-weight: bold;
       }
+    }
+    label,
+    input,
+    textarea {
+      border: red;
     }
   }
 }

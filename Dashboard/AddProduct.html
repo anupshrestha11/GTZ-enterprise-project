@@ -135,9 +135,12 @@
         <div class="form-head">
           What You're Selling
         </div>
-        <form action="#" method="post" class="form">
+        <p class="error-msg"></p>
+        <form action="#" method="post" name="productForm" class="form">
           <div class="form-group">
-            <label for="productName">Product Name: </label>
+            <label for="productName"
+              >Product Name:<span class="required">*</span>
+            </label>
             <input
               type="text"
               name="productName"
@@ -147,19 +150,21 @@
             <span class="input-limit">0/255</span>
           </div>
           <div class="form-group">
-            <label for="category">Category: </label>
-            <select name="category" id="category" class="form-control">
-              <option value="">Select Product Category</option>
-              <option value="">category 1</option>
-              <option value="">category 2</option>
-              <option value="">category 3</option>
-              <option value="">category 4</option>
-              <option value="">category 5</option>
-              <option value="">category 6</option>
-              <option value="">category 7</option>
-              <option value="">category 8</option>
-              <option value="">category 9</option>
-              <option value="">category 10</option>
+            <label for="category"
+              >Category:<span class="required">*</span>
+            </label>
+            <select name="category" id="category" class="custom-select">
+              <option value="0" selected>Select Product Category</option>
+              <option value="1">category 1</option>
+              <option value="2">category 2</option>
+              <option value="3">category 3</option>
+              <option value="4">category 4</option>
+              <option value="5">category 5</option>
+              <option value="6">category 6</option>
+              <option value="7">category 7</option>
+              <option value="8">category 8</option>
+              <option value="9">category 9</option>
+              <option value="10">category 10</option>
             </select>
           </div>
           <div class="form-group">
@@ -174,83 +179,127 @@
             <p>Product Information</p>
           </div>
           <div class="form-group mt-3">
-            <label for="">Product Images</label>
-            <input type="file" multiple class="form-control-file" />
+            <label for="">Product Images:<span class="required">*</span></label>
+            <input
+              type="file"
+              multiple
+              name="productImages"
+              id="productImages"
+              class="form-control-file"
+            />
           </div>
           <div class="form-group mt-3">
-            <label for="sku">SKU: </label>
+            <label for="sku">SKU:<span class="required">*</span> </label>
             <input type="text" name="sku" id="sku" class="form-control" />
           </div>
 
           <div class="ckeditor-div">
-            <label for="">Highlights: </label>
+            <label for="">Highlights:<span class="required">*</span> </label>
             <div class="form-control">
               <textarea id="highlight" name="highlight"></textarea>
             </div>
           </div>
           <div class="ckeditor-div">
-            <label for="">Description: </label>
+            <label for="">Description:<span class="required">*</span> </label>
             <div class="form-control">
               <textarea id="description" name="description"></textarea>
             </div>
           </div>
-          <div class="form-group product-dimension">
-            Product Dimension:
+          <div class="form-group form-inline">
+            <label for="">Product Dimension:</label>
             <input
               type="number"
               name="height"
-              class="form-control ml-4 mr-2"
+              class="form-control col-2 mr-1"
               placeholder="height"
+              min="0"
             />
-            cm
             <input
               type="number"
               name="length"
-              class="form-control ml-4 mr-2"
+              class="form-control col-2 mx-1"
               placeholder="length"
+              min="0"
             />
-            cm
             <input
               type="number"
               name="breadth"
-              class="form-control ml-4 mr-2"
+              class="form-control col-2 ml-1 mr-2"
               placeholder="breadth"
+              min="0"
             />
-            cm
+            <select name="" id="" class="custom-select">
+              <option selected>Select scale unit</option>
+              <option value="">mm</option>
+              <option value="">cm</option>
+              <option value="">inch</option>
+              <option value="">ft</option>
+            </select>
           </div>
-          <div class="form-group package-dimension">
-            Package Dimension:
+
+          <div class="form-group form-inline">
+            <label for="quantity">Quantity: </label>
             <input
               type="number"
-              name="height"
-              class="form-control ml-4 mr-2"
-              placeholder="height"
+              name="quantity"
+              id="quantity"
+              class="form-control mr-1"
+              min="0"
             />
-            cm
-            <input
-              type="number"
-              name="length"
-              class="form-control ml-4 mr-2"
-              placeholder="length"
-            />
-            cm
-            <input
-              type="number"
-              name="breadth"
-              class="form-control ml-4 mr-2"
-              placeholder="breadth"
-            />
-            cm
-          </div>
-          <div class="form-group">
-            <label for="witb">What's in the box: </label>
-            <input type="text" name="witb" id="witb" class="form-control" />
+            <select name="quantityScale" class="custom-select">
+              <option value="0" selected>Select Quantity type</option>
+              <option value="1">KG</option>
+              <option value="2">Pcs</option>
+            </select>
           </div>
           <div class="form-group form-inline">
             <label for="mrp">MRP: </label>
-            <input type="number" name="MRP" id="mrp" class="form-control" />
-            <label for="mrp">Selling Price: </label>
-            <input type="number" name="MRP" id="mrp" class="form-control" />
+            <input
+              type="number"
+              name="MRP"
+              id="mrp"
+              min="0"
+              class="form-control"
+            />
+            <label for="sellingprice"
+              >Selling Price:<span class="required">*</span>
+            </label>
+            <input
+              type="number"
+              name="sellingPrice"
+              id="sellingPrice"
+              min="0"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group form-inline">
+            <label for="daysToDispatch"
+              >Days to Dispatch:<span class="required">*</span>
+            </label>
+            <input
+              type="number"
+              name="daysToDispatch"
+              id="daysToDispatch"
+              min="0"
+              class="form-control"
+            />
+            <label for="returnAccepted"
+              >Return Accepted:<span class="required">*</span>
+            </label>
+            <select name="returnAccept" class="custom-select">
+              <option selected>select one</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <input
+              type="number"
+              name="returnDays"
+              id="returnDays"
+              placeholder="days to return"
+              class="form-control ml-1 disabled"
+              min="0"
+              disabled
+            />
           </div>
 
           <div class="text-center mt-5">
@@ -265,5 +314,17 @@
     <!-- ? ckeditor 5 libary -->
     <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
     <script src="../static/js/dashboard.js"></script>
+    <script>
+      //? ckeditor5
+      const ckeditor = (id) => {
+        ClassicEditor.create(document.querySelector(`#${id} `)).catch(
+          (error) => {
+            console.error(error);
+          }
+        );
+      };
+      ckeditor("highlight");
+      ckeditor("description");
+    </script>
   </body>
 </html>

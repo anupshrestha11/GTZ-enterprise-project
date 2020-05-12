@@ -436,10 +436,15 @@
   width: inherit;
 }
 
-.main .form-block .product-dimension .form-control,
-.main .form-block .package-dimension .form-control {
-  width: 150px;
-  font-size: 14px;
+.main .form-block label span.required {
+  color: red;
+  font-weight: bold;
+}
+
+.main .form-block label,
+.main .form-block input,
+.main .form-block textarea {
+  border: red;
 }
 
 .order-listing .heading {

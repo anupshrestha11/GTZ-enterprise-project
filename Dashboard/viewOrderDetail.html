@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard | GTZ Online Shop</title>
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../static/images/GTZ-logo.png"
+    />
+    <!--? bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--? bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--? material icons link  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- ? custom css for dashboard -->
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="../static/images/profile_picture.png"
+          class="profile-picture"
+          alt=""
+        />
+        <div class="profile-detail">
+          <h5>John Doe</h5>
+          <small>johndoe@gmail.com</small>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="material-icons notification">
+          notifications_none
+          <sup></sup>
+        </span>
+
+        <a href="#" class="btn btn-danger btn-logout">
+          <span class="logout-text">Logout</span>
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+      </div>
+    </header>
+    <aside>
+      <nav>
+        <div class="btn-toggle-menu">
+          <span class="material-icons">
+            menu
+          </span>
+          <img
+            src="../static/images/GTZ-logo.png"
+            class="logo"
+            alt="GTZ logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="Dashboard.html" class="nav-item btn">
+              <span class="material-icons">
+                dashboard
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="">
+            <a href="Listing.html" class="nav-item btn">
+              <span class="material-icons">
+                shop
+              </span>
+              <span class="nav-text">Listing</span>
+            </a>
+          </li>
+          <li>
+            <a href="./orders.html" class="nav-item btn">
+              <span class="material-icons">
+                book
+              </span>
+              <span class="nav-text">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                account_circle
+              </span>
+              <span class="nav-text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                card_giftcard
+              </span>
+              <span class="nav-text">Coupons</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="main container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Order Detail</h3>
+        </div>
+        <div class="col-12 row">
+          <div class="col-md-3">
+            <p>Product Id:</p>
+          </div>
+          <div class="col-md-9">
+            <p class="product-id">0123456789</p>
+          </div>
+          <div class="col-md-3">
+            <p>Product Name :</p>
+          </div>
+          <div class="col-md-9">
+            <p class="product-name">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+              dicta ea labore quisquam cupiditate at possimus dolor ullam.
+              Eveniet, maiores?
+            </p>
+          </div>
+
+          <div class="col-md-3">
+            <p>SKU:</p>
+          </div>
+          <div class="col-md-9">
+            <p class="quantity">0123456789</p>
+          </div>
+          <div class="col-md-3">
+            <p>Quantity</p>
+          </div>
+          <div class="col-md-9">
+            <p class="quantity">10 pcs</p>
+          </div>
+          <div class="col-md-3">
+            <p>Customer Id:</p>
+          </div>
+          <div class="col-md-9">
+            <p class="customer-id">0123456789</p>
+          </div>
+          <div class="col-md-3">
+            <p>Customer Name</p>
+          </div>
+          <div class="col-md-9">
+            <p class="customer-name">Mary Doe</p>
+          </div>
+          <div class="col-md-3">
+            <p>Price</p>
+          </div>
+          <div class="col-md-9">
+            <p>Rs. 35000 per pcs</p>
+          </div>
+          <div class="col-md-3">
+            <p>Total Price:</p>
+          </div>
+          <div class="col-md-9">
+            <p class="total-price">Rs 350000</p>
+          </div>
+          <div class="col-md-3">
+            <p>Order Status:</p>
+          </div>
+          <div class="col-md-9">
+            <p class="order-status">Pending</p>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-warning">Out of stock</button>
+            <button class="btn btn-success">Ready to Pickup</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>
