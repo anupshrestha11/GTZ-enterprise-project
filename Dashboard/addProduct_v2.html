@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard | GTZ Online Shop</title>
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../static/images/GTZ-logo.png"
+    />
+    <!--? bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--? bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--? material icons link  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- ? custom css for dashboard -->
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="../static/images/profile_picture.png"
+          class="profile-picture"
+          alt=""
+        />
+        <div class="profile-detail">
+          <h5>John Doe</h5>
+          <small>johndoe@gmail.com</small>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="material-icons notification">
+          notifications_none
+          <sup></sup>
+        </span>
+
+        <a href="#" class="btn btn-danger btn-logout">
+          <span class="logout-text">Logout</span>
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+      </div>
+    </header>
+    <aside>
+      <nav>
+        <div class="btn-toggle-menu">
+          <span class="material-icons">
+            menu
+          </span>
+          <img
+            src="../static/images/GTZ-logo.png"
+            class="logo"
+            alt="GTZ logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="Dashboard.html" class="nav-item btn">
+              <span class="material-icons">
+                dashboard
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="Listing.html" class="nav-item btn">
+              <span class="material-icons">
+                shop
+              </span>
+              <span class="nav-text">Listing</span>
+            </a>
+          </li>
+          <li>
+            <a href="./orders.html" class="nav-item btn">
+              <span class="material-icons">
+                book
+              </span>
+              <span class="nav-text">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                account_circle
+              </span>
+              <span class="nav-text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                card_giftcard
+              </span>
+              <span class="nav-text">Coupons</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="main container add-product-section">
+      <h3 class="text-center">
+        Add New Product
+      </h3>
+      <form action="" method="post" name="addNewProductForm" class="row form">
+        <div class="heading col-12">What You're Selling</div>
+        <div class="form-group col-12 row">
+          <label for="productName" class="col-sm-3">
+            Product Name: <span class="required">*</span>
+          </label>
+          <input type="text" name="" id="" class="form-control col-sm-9" />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="category" class="col-sm-3">
+            Product Category: <span class="required">*</span>
+          </label>
+          <select name="category" id="category" class="custom-select col-sm-9">
+            <option value="0">Select Product Category</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 1</option>
+            <option value="3">Category 1</option>
+          </select>
+        </div>
+
+        <div class="form-group col-12 row">
+          <label for="brand" class="col-sm-3">Brand:</label>
+          <input
+            type="text"
+            name="brand"
+            id="brand"
+            class="form-control col-sm-9"
+          />
+        </div>
+
+        <div class="form-group col-12 row">
+          <label for="model" class="col-sm-3">Model:</label>
+          <input
+            type="text"
+            name="model"
+            id="model"
+            class="form-control col-sm-9"
+          />
+        </div>
+        <div class="heading col-12">Basic Information</div>
+        <div class="form-group col-12 row">
+          <label for="productImages" class="col-sm-3"
+            >Upload Product: <span class="required">*</span></label
+          >
+          <input
+            type="file"
+            name="productImages"
+            id="productImages"
+            class="form-control-file col-sm-9"
+            multiple
+            accept=".jpg,.jpeg,.png"
+            required
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="sku" class="col-sm-3"
+            >SKU: <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            name="sku"
+            id="sku"
+            class="form-control col-sm-9"
+          />
+        </div>
+        <div class="form-group col-12">
+          <label for="highlight" class="mb-2"
+            >Product Highlight: <span class="required">*</span></label
+          >
+          <textarea name="highlight" id="highlight" cols="" rows=""></textarea>
+        </div>
+        <div class="form-group col-12">
+          <label for="description" class="mb-2"
+            >Product Description: <span class="required">*</span></label
+          >
+          <textarea
+            name="description"
+            id="description"
+            cols=""
+            rows=""
+          ></textarea>
+        </div>
+        <div class="form-group col-12 row">
+          <label for="dimensionType" class="col-sm-3">Product Dimenion</label>
+          <select
+            name="dimensionType"
+            id="dimensionType"
+            class="custom-select col-sm-2 mr-1"
+          >
+            <option value="0">Select Dimension scale</option>
+            <option value="1">mm</option>
+            <option value="2">cm</option>
+            <option value="3">inch</option>
+            <option value="4">ft</option>
+          </select>
+          <input
+            type="number"
+            name="lenght"
+            id="length"
+            class="form-control col-sm-2 mx-1 dimension-input"
+            placeholder="Lenght"
+            min="0"
+            disabled
+          />
+          <input
+            type="number"
+            name="breadth"
+            id="breadth"
+            class="form-control col-sm-2 mx-1 dimension-input"
+            placeholder="Breadth"
+            min="0"
+            disabled
+          />
+          <input
+            type="number"
+            name="height"
+            id="height"
+            class="form-control col-sm-2 ml-1 dimension-input"
+            placeholder="Height"
+            min="0"
+            disabled
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="quantityType" class="col-sm-3">
+            Quantity:
+          </label>
+          <select
+            name="quantityType"
+            id="quantityType"
+            class="custom-select col-sm-2"
+          >
+            <option value="0" selected>Select Quantity Type</option>
+            <option value="1">Pcs</option>
+            <option value="2">KG</option>
+          </select>
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            class="form-control col-sm-2 ml-2"
+            min="0"
+            placeholder="Quantity"
+            disabled
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="status" class="col-sm-3">
+            Product Status: <span class="required">*</span>
+          </label>
+          <select name="status" id="status" class="custom-select col-sm-3">
+            <option value="0" selected>Select One</option>
+            <option value="1">Active</option>
+            <option value="2">In-Active</option>
+          </select>
+        </div>
+        <div class="form-group col-12 row">
+          <label for="mrp" class="col-sm-3">MRP</label>
+          <input
+            type="number"
+            name="mrp"
+            id="mrp"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="MRP"
+          />
+          <label for="sp" class="col-sm-3"
+            >Selling Price: <span class="required">*</span></label
+          >
+          <input
+            type="number"
+            name="sp"
+            id="sp"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="Selling Price"
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="DTD" class="col-sm-3">
+            Days to Dispatch: <span class="required">*</span>
+          </label>
+          <input
+            type="number"
+            name="DTD"
+            id="DTD"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="Days to dispatch"
+          />
+          <label for="returnAccept" class="col-sm-3">
+            Return Accepted: <span class="required">*</span>
+          </label>
+          <select
+            name="returnAccept"
+            id="returnAccept"
+            class="custom-select col-sm-1"
+          >
+            <option value="0" selected>Select One</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <input
+            type="number"
+            name="returnDays"
+            id="returnDays"
+            placeholder="Days"
+            min="0"
+            class="form-control col-sm-1 ml-2"
+            disabled
+          />
+        </div>
+        <div class="col-12 my-2 text-center">
+          <button class="btn btn-secondary my-1 mx-1">Save Draft</button>
+          <input
+            type="submit"
+            value="Submit"
+            class="btn btn-success my-1 mx-1"
+          />
+          <input type="reset" value="Reset" class="btn btn-warning my-1 mx-1" />
+        </div>
+      </form>
+    </section>
+
+    <!-- ? ckeditor 5 libary -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script>
+      //? ckeditor5
+      const ckeditor = (id) => {
+        ClassicEditor.create(document.querySelector(`#${id} `)).catch(
+          (error) => {
+            console.error(error);
+          }
+        );
+      };
+      ckeditor("highlight");
+      ckeditor("description");
+    </script>
+  </body>
+</html>
