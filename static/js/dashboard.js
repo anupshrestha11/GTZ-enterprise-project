@@ -47,13 +47,13 @@ const formData = {
   daysToDispatch: productForm["daysToDispatch"],
   returnAccept: productForm["returnAccept"],
   ruternDays: productForm["returnDays"],
+  status: productForm["status"],
 
   //Todo scale select problem at last
   // quantity: productForm["quantity"],
   // quantityScale: productForm["quantityScale"],
 };
 const validateProductForm = (e) => {
-  let i = 1;
   const checknull = (name) => {
     if (name.value === null || name.value === undefined || name.value === "") {
       name.focus();
@@ -83,7 +83,8 @@ const validateProductForm = (e) => {
     checknull(formData.description) ||
     checknull(formData.sellingPrice) ||
     checknull(formData.daysToDispatch) ||
-    checknull(formData.ruternDays)
+    checknull(formData.ruternDays) ||
+    checkSelect(formData.status)
   ) {
     e.preventDefault();
     document.querySelector(".error-msg").textContent =
