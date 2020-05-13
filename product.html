@@ -35,6 +35,16 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- ? Owl Carousel css and js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!--? material icons link  -->
     <link
@@ -46,7 +56,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
     <!-- ? elevate js for product zoom -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script> -->
 
     <!--? custom css  -->
     <link rel="stylesheet" href="./static/css/home.css" />
@@ -116,12 +126,63 @@
     </div>
 
     <!-- ? product section -->
-    <section class="product container-fluid w-75">
+    <section class="product container-fluid">
       <div class="row">
-        <div class="6 col-md-4 col-sm-12 image-box">
-          <img src="./static/images/laptop.jpg" alt="" id="product-name" />
+        <div class="col-lg-4 col-md-8 col-sm-12 image-box container-fluid">
+          <img
+            src="./static/images/laptop.jpg"
+            alt=""
+            id="productImage"
+            class="main-image"
+          />
+          <div class="image-selection" id="gallery">
+            <div class="image-item">
+              <a
+                href="#"
+                class="elevatezoom-gallery active-image"
+                data-update=""
+                data-image="./static/images/laptop.jpg"
+                data-zoom-image="./static/images/laptop.jpg"
+              >
+                <img src="./static/images/laptop.jpg" alt="" class="img-opt" />
+              </a>
+            </div>
+            <div class="image-item">
+              <a
+                href="#"
+                class="elevatezoom-gallery"
+                data-update=""
+                data-image="./static/images/laptop1.png"
+                data-zoom-image="./static/images/laptop1.png"
+              >
+                <img src="./static/images/laptop1.png" alt="" class="img-opt" />
+              </a>
+            </div>
+            <div class="image-item">
+              <a
+                href="#"
+                class="elevatezoom-gallery"
+                data-update=""
+                data-image="./static/images/laptop2.jpg"
+                data-zoom-image="./static/images/laptop2.jpg"
+              >
+                <img src="./static/images/laptop2.jpg" alt="" class="img-opt" />
+              </a>
+            </div>
+            <div class="image-item">
+              <a
+                href="#"
+                class="elevatezoom-gallery slide-content"
+                data-update=""
+                data-image="./static/images/laptop3.jpg"
+                data-zoom-image="./static/images/laptop3.jpg"
+              >
+                <img src="./static/images/laptop3.jpg" alt="" class="img-opt" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8 col-sm-12 product-detail">
+        <div class="col-lg-8 col-md-12 col-sm-12 product-detail">
           <!-- TODO product detail and style -->
           <h3 class="product-name">
             Lenovo Flex 14 2-in-1 Convertible Laptop, 14 Inch FHD Touchscreen
@@ -145,26 +206,21 @@
           <hr />
           <p class="product-state">In Stock</p>
           <div class="product-highlight">
-            <ul class="highlight-list">
-              <li class="hightlight-item">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                natus corporis dolore eos maiores sed autem consequatur, aut
-                laudantium sunt consectetur repudiandae dignissimos quis, fugit
-                molestiae! Quisquam inventore voluptates veritatis?
-              </li>
-              <li class="hightlight-item">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                natus corporis dolore eos maiores sed autem consequatur, aut
-                laudantium sunt consectetur repudiandae dignissimos quis, fugit
-                molestiae! Quisquam inventore voluptates veritatis?
-              </li>
-              <li class="hightlight-item">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                natus corporis dolore eos maiores sed autem consequatur, aut
-                laudantium sunt consectetur repudiandae dignissimos quis, fugit
-                molestiae! Quisquam inventore voluptates veritatis?
-              </li>
-            </ul>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+              sequi architecto. Nihil omnis voluptates doloribus quas quam
+              molestiae quia eius.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+              sequi architecto. Nihil omnis voluptates doloribus quas quam
+              molestiae quia eius.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+              sequi architecto. Nihil omnis voluptates doloribus quas quam
+              molestiae quia eius.
+            </p>
           </div>
         </div>
         <div class="col-12">
@@ -229,11 +285,61 @@
       </div>
     </footer>
     <!-- ? custom js for bootstrap carousel and owl carousel -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/jquery/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/igorlino/fancybox-plus/1.3.6/src/jquery.fancybox-plus.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/igorlino/fancybox-plus/1.3.6/css/jquery.fancybox-plus.css"
+      media="screen"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.17/src/jquery.ez-plus.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.17/css/jquery.ez-plus.css"
+      media="screen"
+    />
     <script>
       $(document).ready(function () {
-        $("#product-name").elevateZoom({
+        $("#productImage").ezPlus({
+          // zoomType: "inner",
+          cursor: "crosshair",
           scrollZoom: true,
+          galleryActiveClass: "active-image",
+          // imageCrossfade: true,
+          // zoomWindowWidth: 400,
+          // zoomWindowHeight: 300,
+          // tint: true,
+          // tintColour: "#F90",
+          // tintOpacity: 0.5,
           easing: true,
+          responsive: true,
+          gallery: "gallery",
+        });
+        //pass the images to Fancybox
+        $("#productImage").bind("click", function (e) {
+          var ez = $("#productImage").data("ezPlus");
+          $.fancyboxPlus(ez.getGalleryList());
+          return false;
         });
       });
     </script>

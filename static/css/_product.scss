@@ -23,11 +23,47 @@
   .image-box {
     padding: 1em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    user-select: none;
+
     img {
       width: calc(100% - 2em);
+      height: 300px;
       object-fit: contain;
+    }
+    .image-selection {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 1em;
+      div.image-item {
+        position: relative;
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        a {
+          width: 80px;
+          height: 80px;
+        }
+        img {
+          width: 80px;
+          height: 80px;
+          position: relative;
+          object-fit: contain;
+          z-index: -1;
+          padding: 2px;
+        }
+        .active-image {
+          width: 80px;
+          height: 80px;
+          z-index: 10;
+          opacity: 0.6;
+        }
+      }
     }
   }
   .product-detail {
