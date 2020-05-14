@@ -169,7 +169,7 @@
             <li class="view-opt active">All</li>
             <li class="view-opt">Live</li>
             <li class="view-opt"><span>Out-of-Stock</span></li>
-            <li class="view-opt">Disabled</li>
+            <li class="view-opt">In-Active</li>
           </ul>
           <div class="form-inline sorting">
             <label for="sort">Sort by: </label>
@@ -226,7 +226,7 @@
                     Included 4.4 out of 5 stars 1,439
                   </p>
                   <p class="product-id">
-                    <span class="label-text">Product Id: </span>123456789
+                    <span class="label-text">Sku Id: </span>123456789
                   </p>
                 </td>
                 <td>
@@ -248,11 +248,13 @@
                   </button>
                 </td>
                 <td class="text-center">
-                  <a href="google.com" class="btn delete">
-                    <span class="material-icons">
-                      delete
-                    </span>
-                  </a>
+                  <form action="google.com">
+                    <input
+                      type="submit"
+                      value="delete"
+                      class="material-icons btn delete"
+                    />
+                  </form>
                   <a href="#" class="btn">
                     <span class="material-icons">
                       edit
