@@ -191,6 +191,26 @@
             multiple
             accept=".jpg,.jpeg,.png"
           />
+          <div class="col-12 product-image-div">
+            <div>
+              <img src="../static/images/laptop.jpg" alt="" />
+              <a href="#" class="btn"
+                ><span class="material-icons">delete</span></a
+              >
+            </div>
+            <div>
+              <img src="../static/images/laptop.jpg" alt="" />
+              <a href="#" class="btn"
+                ><span class="material-icons">delete</span></a
+              >
+            </div>
+            <div>
+              <img src="../static/images/laptop.jpg" alt="" />
+              <a href="#" class="btn"
+                ><span class="material-icons">delete</span></a
+              >
+            </div>
+          </div>
         </div>
         <div class="form-group col-12 row">
           <label for="sku" class="col-sm-3"
@@ -207,18 +227,14 @@
           <label for="highlight" class="mb-2"
             >Product Highlight: <span class="required">*</span></label
           >
-          <textarea name="highlight" id="highlight" cols="" rows=""></textarea>
+          <textarea name="highlight" id="highlight" cols="" rows=""> </textarea>
         </div>
         <div class="form-group col-12">
           <label for="description" class="mb-2"
             >Product Description: <span class="required">*</span></label
           >
-          <textarea
-            name="description"
-            id="description"
-            cols=""
-            rows=""
-          ></textarea>
+          <textarea name="description" id="description" cols="" rows="">
+          </textarea>
         </div>
         <div class="form-group col-12 row">
           <label for="dimensionType" class="col-sm-3">Product Dimenion</label>
@@ -227,7 +243,7 @@
             id="dimensionType"
             class="custom-select col-sm-2 mr-1"
           >
-            <option value="0">Select Dimension scale</option>
+            <option value="">Select Dimension scale</option>
             <option value="1">mm</option>
             <option value="2">cm</option>
             <option value="3">inch</option>
@@ -235,7 +251,7 @@
           </select>
           <input
             type="number"
-            name="lenght"
+            name="length"
             id="length"
             class="form-control col-sm-2 mx-1 dimension-input"
             placeholder="Lenght"
@@ -270,7 +286,7 @@
             id="quantityType"
             class="custom-select col-sm-2"
           >
-            <option value="0" selected>Select Quantity Type</option>
+            <option value="" selected>Select Quantity Type</option>
             <option value="1">Pcs</option>
             <option value="2">KG</option>
           </select>
@@ -351,10 +367,9 @@
           />
         </div>
         <div class="col-12 my-2 text-center">
-          <button class="btn btn-secondary my-1 mx-1">Save Draft</button>
           <input
             type="submit"
-            value="Submit"
+            value="Update"
             class="btn btn-success my-1 mx-1"
           />
           <input type="reset" value="Reset" class="btn btn-warning my-1 mx-1" />

@@ -46,7 +46,7 @@ const formData = {
 
   productDimensionType: productForm["dimensionType"],
   productDimension: {
-    length: productForm["lenght"],
+    length: productForm["length"],
     breadth: productForm["breadth"],
     height: productForm["height"],
   },
