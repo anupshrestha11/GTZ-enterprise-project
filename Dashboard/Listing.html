@@ -248,9 +248,11 @@
                   </button>
                 </td>
                 <td class="text-center">
-                  <span class="material-icons">
-                    delete
-                  </span>
+                  <a href="google.com" class="btn delete-list-item">
+                    <span class="material-icons">
+                      delete
+                    </span>
+                  </a>
                   <span class="material-icons">
                     edit
                   </span>
@@ -296,7 +298,6 @@
                   <p><span class="label-text">Return Accepted: </span>Yes</p>
                 </td>
                 <td class="text-center">
-                
                   <button class="btn btn-active btn-secondary">
                     Active
                   </button>
@@ -318,10 +319,6 @@
         </div>
       </div>
       <!-- ? end of product listing -->
-
-      <!-- ? modals -->
-      
-      <!-- ? end modals -->
     </section>
     <script>
       $(".view-opt").click(onClick);
@@ -352,6 +349,15 @@
           $('input[name="all-check"]').prop("checked") === true
         ) {
           $('input[name="all-check"]').prop("checked", false);
+        }
+      });
+    </script>
+    <script>
+      //? listing delete comfirm button
+
+      $(".delete-list-item").click((e) => {
+        if (!confirm("Do you want to delete!!!")) {
+          e.preventDefault();
         }
       });
     </script>

@@ -161,3 +161,5 @@ const validateProductForm = (e) => {
   }
 };
 productForm.addEventListener("submit", validateProductForm);
+
+
