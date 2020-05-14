@@ -22,6 +22,13 @@ document.querySelector(".btn-toggle-menu").addEventListener(
   true
 );
 
+//delete comfirmation
+$(".delete").click((e) => {
+  if (!confirm("Do you want to delete!!!")) {
+    e.preventDefault();
+  }
+});
+
 const ellipsis = (item) => {
   $(`.${item}`).html((index, currentText) => {
     let maxLength = $(`.${item}`).attr("data-maxlength");
@@ -161,5 +168,3 @@ const validateProductForm = (e) => {
   }
 };
 productForm.addEventListener("submit", validateProductForm);
-
-

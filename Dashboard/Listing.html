@@ -248,17 +248,19 @@
                   </button>
                 </td>
                 <td class="text-center">
-                  <a href="google.com" class="btn delete-list-item">
+                  <a href="google.com" class="btn delete">
                     <span class="material-icons">
                       delete
                     </span>
                   </a>
-                  <span class="material-icons">
-                    edit
-                  </span>
-                  <span class="material-icons">
+                  <a href="#" class="btn">
+                    <span class="material-icons">
+                      edit
+                    </span>
+                  </a>
+                  <!-- <span class="material-icons">
                     more_vert
-                  </span>
+                  </span> -->
                 </td>
               </tr>
               <tr>
@@ -352,15 +354,7 @@
         }
       });
     </script>
-    <script>
-      //? listing delete comfirm button
 
-      $(".delete-list-item").click((e) => {
-        if (!confirm("Do you want to delete!!!")) {
-          e.preventDefault();
-        }
-      });
-    </script>
     <script src="../static/js/dashboard.js"></script>
   </body>
 </html>
