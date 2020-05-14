@@ -147,20 +147,13 @@ const validateProductForm = (e) => {
     checknull(formData.daysToDispatch) ||
     checkSelect(formData.status)
   ) {
-    errorMsg();
+    e.preventDefault();
+    document.querySelector(".error-msg").textContent =
+      "All Fields Indicated '*' Must Be Filled";
+    document.querySelector(".error-msg").classList.add("alert");
+    document.querySelector(".error-msg").classList.add("alert-danger");
+    document.querySelector(".error-msg").classList.add("text-center");
     return false;
   }
 };
 productForm.addEventListener("submit", validateProductForm);
-
-productForm.returnAccept.addEventListener("change", () => {
-  if (productForm.returnAccept.value === "yes") {
-    document.querySelector("#returnDays").disabled = false;
-    document.querySelector("#returnDays").style.backgroundColor = "#fff";
-  } else {
-    document.querySelector("#returnDays").disabled = true;
-    document.querySelector("#returnDays").style.backgroundColor = "#c9c9c9";
-  }
-});
-
-document.querySelector("#returnDays").style.backgroundColor = "#c9c9c9";
