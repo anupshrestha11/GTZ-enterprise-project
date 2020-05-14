@@ -75,12 +75,16 @@ formData.productDimensionType.addEventListener("change", () => {
     formData.productDimensionType.value === null ||
     formData.productDimensionType.value === undefined ||
     formData.productDimensionType.value === "" ||
-    formData.productDimensionType.value === "0"
+    formData.productDimensionType.value === 0
   ) {
     dimension.forEach((item) => {
       item.disabled = true;
     });
-  } else if (formData.productDimensionType.value > 0) {
+  } else if (formData.productDimensionType.value === "0") {
+    dimension.forEach((item) => {
+      item.disabled = true;
+    });
+  } else {
     dimension.forEach((item) => {
       item.disabled = false;
     });
@@ -92,7 +96,7 @@ formData.quantityType.addEventListener("change", () => {
     formData.quantityType.value === null ||
     formData.quantityType.value === undefined ||
     formData.quantityType.value === "" ||
-    formData.quantityType.value === "0"
+    formData.quantityType.value === 0
   ) {
     formData.quantity.disabled = true;
   } else {

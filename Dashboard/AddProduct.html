@@ -129,199 +129,237 @@
       </nav>
     </aside>
 
-    <section class="main container mb-5">
-      <h3>Add Product</h3>
-      <section class="form-block">
-        <div class="form-head">
-          What You're Selling
+    <section class="main container add-product-section">
+      <h3 class="text-center">
+        Add New Product
+      </h3>
+      <form action="#" method="post" name="addNewProductForm" class="row form">
+        <div class="heading col-12">What You're Selling</div>
+        <p class="error-msg col-12"></p>
+        <div class="form-group col-12 row">
+          <label for="productName" class="col-sm-3">
+            Product Name: <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            name="productName"
+            id="productName"
+            class="form-control col-sm-9"
+          />
         </div>
-        <p class="error-msg"></p>
-        <form action="#" method="post" name="productForm" class="form">
-          <div class="form-group">
-            <label for="productName">
-              Product Name:<span class="required">*</span>
-            </label>
-            <input
-              type="text"
-              name="productName"
-              id="productName"
-              class="form-control"
-            />
-            <span class="input-limit">0/255</span>
-          </div>
-          <div class="form-group">
-            <label for="category"
-              >Category:<span class="required">*</span>
-            </label>
-            <select name="category" id="category" class="custom-select">
-              <option value="0" selected>Select Product Category</option>
-              <option value="1">category 1</option>
-              <option value="2">category 2</option>
-              <option value="3">category 3</option>
-              <option value="4">category 4</option>
-              <option value="5">category 5</option>
-              <option value="6">category 6</option>
-              <option value="7">category 7</option>
-              <option value="8">category 8</option>
-              <option value="9">category 9</option>
-              <option value="10">category 10</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="brand">Brand: </label>
-            <input type="text" class="form-control" name="brand" id="brand" />
-          </div>
-          <div class="form-group">
-            <label for="model">Model: </label>
-            <input type="text" name="model" id="model" class="form-control" />
-          </div>
-          <div class="form-head">
-            <p>Product Information</p>
-          </div>
-          <div class="form-group mt-3">
-            <label for="">Product Images:<span class="required">*</span></label>
-            <input
-              type="file"
-              multiple
-              name="productImages"
-              id="productImages"
-              class="form-control-file"
-            />
-          </div>
-          <div class="form-group mt-3">
-            <label for="sku">SKU:<span class="required">*</span> </label>
-            <input type="text" name="sku" id="sku" class="form-control" />
-          </div>
+        <div class="form-group col-12 row">
+          <label for="category" class="col-sm-3">
+            Product Category: <span class="required">*</span>
+          </label>
+          <select name="category" id="category" class="custom-select col-sm-9">
+            <option value="0">Select Product Category</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 1</option>
+            <option value="3">Category 1</option>
+          </select>
+        </div>
 
-          <div class="ckeditor-div">
-            <label for="">Highlights:<span class="required">*</span> </label>
-            <div class="form-control">
-              <textarea id="highlight" name="highlight"></textarea>
-            </div>
-          </div>
-          <div class="ckeditor-div">
-            <label for="">Description:<span class="required">*</span> </label>
-            <div class="form-control">
-              <textarea id="description" name="description"></textarea>
-            </div>
-          </div>
-          <div class="form-group form-inline">
-            <label for="">Product Dimension:</label>
-            <input
-              type="number"
-              name="height"
-              class="form-control col-2 mr-1"
-              placeholder="height"
-              min="0"
-            />
-            <input
-              type="number"
-              name="length"
-              class="form-control col-2 mx-1"
-              placeholder="length"
-              min="0"
-            />
-            <input
-              type="number"
-              name="breadth"
-              class="form-control col-2 ml-1 mr-2"
-              placeholder="breadth"
-              min="0"
-            />
-            <select name="" id="" class="custom-select">
-              <option selected>Select scale unit</option>
-              <option value="">mm</option>
-              <option value="">cm</option>
-              <option value="">inch</option>
-              <option value="">ft</option>
-            </select>
-          </div>
+        <div class="form-group col-12 row">
+          <label for="brand" class="col-sm-3">Brand:</label>
+          <input
+            type="text"
+            name="brand"
+            id="brand"
+            class="form-control col-sm-9"
+          />
+        </div>
 
-          <div class="form-group form-inline">
-            <label for="quantity">Quantity: </label>
-            <input
-              type="number"
-              name="quantity"
-              id="quantity"
-              class="form-control mr-1"
-              min="0"
-            />
-            <select name="quantityScale" class="custom-select">
-              <option value="0" selected>Select Quantity type</option>
-              <option value="1">KG</option>
-              <option value="2">Pcs</option>
-            </select>
-          </div>
-          <div class="form-group form-inline">
-            <label for="mrp">MRP: </label>
-            <input
-              type="number"
-              name="MRP"
-              id="mrp"
-              min="0"
-              class="form-control"
-            />
-            <label for="sellingprice"
-              >Selling Price:<span class="required">*</span>
-            </label>
-            <input
-              type="number"
-              name="sellingPrice"
-              id="sellingPrice"
-              min="0"
-              class="form-control"
-            />
-          </div>
-          <div class="form-group form-inline">
-            <label for="daysToDispatch"
-              >Days to Dispatch:<span class="required">*</span>
-            </label>
-            <input
-              type="number"
-              name="daysToDispatch"
-              id="daysToDispatch"
-              min="0"
-              class="form-control"
-            />
-            <label for="returnAccepted"
-              >Return Accepted:<span class="required">*</span>
-            </label>
-            <select name="returnAccept" class="custom-select">
-              <option selected>select one</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-            <input
-              type="number"
-              name="returnDays"
-              id="returnDays"
-              placeholder="days to return"
-              class="form-control ml-1 disabled"
-              min="0"
-              disabled
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="status">Product Status</label>
-            <select
-              name="status"
-              id="status"
-              class="custom-select col-md-4 col-sm-12"
-            >
-              <option value="0" selected>Select status</option>
-              <option value="1">Active</option>
-              <option value="2">In-Active</option>
-            </select>
-          </div>
-
-          <div class="text-center mt-5">
-            <button class="btn btn-secondary mr-4">Save Draft</button>
-            <input type="submit" value="Submit" class="btn btn-success mx-4" />
-            <input type="reset" value="Cancel" class="btn btn-warning ml-4" />
-          </div>
-        </form>
-      </section>
+        <div class="form-group col-12 row">
+          <label for="model" class="col-sm-3">Model:</label>
+          <input
+            type="text"
+            name="model"
+            id="model"
+            class="form-control col-sm-9"
+          />
+        </div>
+        <div class="heading col-12">Basic Information</div>
+        <div class="form-group col-12 row">
+          <label for="productImages" class="col-sm-3"
+            >Upload Product: <span class="required">*</span></label
+          >
+          <input
+            type="file"
+            name="productImages"
+            id="productImages"
+            class="form-control-file col-sm-9"
+            multiple
+            accept=".jpg,.jpeg,.png"
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="sku" class="col-sm-3"
+            >SKU: <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            name="sku"
+            id="sku"
+            class="form-control col-sm-9"
+          />
+        </div>
+        <div class="form-group col-12">
+          <label for="highlight" class="mb-2"
+            >Product Highlight: <span class="required">*</span></label
+          >
+          <textarea name="highlight" id="highlight" cols="" rows=""></textarea>
+        </div>
+        <div class="form-group col-12">
+          <label for="description" class="mb-2"
+            >Product Description: <span class="required">*</span></label
+          >
+          <textarea
+            name="description"
+            id="description"
+            cols=""
+            rows=""
+          ></textarea>
+        </div>
+        <div class="form-group col-12 row">
+          <label for="dimensionType" class="col-sm-3">Product Dimenion</label>
+          <select
+            name="dimensionType"
+            id="dimensionType"
+            class="custom-select col-sm-2 mr-1"
+          >
+            <option value="0">Select Dimension scale</option>
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>
+            <option value="inch">inch</option>
+            <option value="ft">ft</option>
+          </select>
+          <input
+            type="number"
+            name="lenght"
+            id="length"
+            class="form-control col-sm-2 mx-1 dimension-input"
+            placeholder="Lenght"
+            min="0"
+            disabled
+          />
+          <input
+            type="number"
+            name="breadth"
+            id="breadth"
+            class="form-control col-sm-2 mx-1 dimension-input"
+            placeholder="Breadth"
+            min="0"
+            disabled
+          />
+          <input
+            type="number"
+            name="height"
+            id="height"
+            class="form-control col-sm-2 ml-1 dimension-input"
+            placeholder="Height"
+            min="0"
+            disabled
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="quantityType" class="col-sm-3">
+            Quantity:
+          </label>
+          <select
+            name="quantityType"
+            id="quantityType"
+            class="custom-select col-sm-2"
+          >
+            <option value="0" selected>Select Quantity Type</option>
+            <option value="1">Pcs</option>
+            <option value="2">KG</option>
+          </select>
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            class="form-control col-sm-2 ml-2"
+            min="0"
+            placeholder="Quantity"
+            disabled
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="status" class="col-sm-3">
+            Product Status: <span class="required">*</span>
+          </label>
+          <select name="status" id="status" class="custom-select col-sm-3">
+            <option value="0" selected>Select One</option>
+            <option value="1">Active</option>
+            <option value="2">In-Active</option>
+          </select>
+        </div>
+        <div class="form-group col-12 row">
+          <label for="mrp" class="col-sm-3">MRP</label>
+          <input
+            type="number"
+            name="mrp"
+            id="mrp"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="MRP"
+          />
+          <label for="sp" class="col-sm-3"
+            >Selling Price: <span class="required">*</span></label
+          >
+          <input
+            type="number"
+            name="sp"
+            id="sp"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="Selling Price"
+          />
+        </div>
+        <div class="form-group col-12 row">
+          <label for="DTD" class="col-sm-3">
+            Days to Dispatch: <span class="required">*</span>
+          </label>
+          <input
+            type="number"
+            name="DTD"
+            id="DTD"
+            min="0"
+            class="form-control col-sm-3"
+            placeholder="Days to dispatch"
+          />
+          <label for="returnAccept" class="col-sm-3">
+            Return Accepted: <span class="required">*</span>
+          </label>
+          <select
+            name="returnAccept"
+            id="returnAccept"
+            class="custom-select col-sm-1"
+          >
+            <option value="0" selected>Select One</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <input
+            type="number"
+            name="returnDays"
+            id="returnDays"
+            placeholder="Days"
+            min="0"
+            class="form-control col-sm-1 ml-2"
+            disabled
+          />
+        </div>
+        <div class="col-12 my-2 text-center">
+          <button class="btn btn-secondary my-1 mx-1">Save Draft</button>
+          <input
+            type="submit"
+            value="Submit"
+            class="btn btn-success my-1 mx-1"
+          />
+          <input type="reset" value="Reset" class="btn btn-warning my-1 mx-1" />
+        </div>
+      </form>
     </section>
 
     <!-- ? ckeditor 5 libary -->
