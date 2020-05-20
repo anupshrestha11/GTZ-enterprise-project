@@ -166,10 +166,12 @@
       <div class="products-listing">
         <div class="products-view">
           <ul class="product-view-opts">
-            <li class="view-opt active">All</li>
-            <li class="view-opt">Live</li>
-            <li class="view-opt"><span>Out-of-Stock</span></li>
-            <li class="view-opt">In-Active</li>
+            <li class="view-opt active" data-table="all">All</li>
+            <li class="view-opt" data-table="live">Live</li>
+            <li class="view-opt" data-table="outOfStock">
+              <span>Out-of-Stock</span>
+            </li>
+            <li class="view-opt" data-table="inActive">In-Active</li>
           </ul>
           <div class="form-inline sorting">
             <label for="sort">Sort by: </label>
@@ -202,7 +204,7 @@
                 <th></th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="all">
               <tr>
                 <td>
                   <label for="check-1" class="checkbox-container">
@@ -307,19 +309,83 @@
                   </button>
                 </td>
                 <td class="text-center">
-                  <span class="material-icons">
-                    delete
-                  </span>
-                  <span class="material-icons">
-                    edit
-                  </span>
-                  <span class="material-icons">
-                    more_vert
-                  </span>
+                  <form action="google.com">
+                    <input
+                      type="submit"
+                      value="delete"
+                      class="material-icons btn delete"
+                    />
+                  </form>
+                  <a href="#" class="btn">
+                    <span class="material-icons">
+                      edit
+                    </span>
+                  </a>
                 </td>
               </tr>
             </tbody>
+            <tbody id="live">
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Live</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody id="outOfStock">
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Out of stock</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody id="inActive">
+              <tr>
+                <td></td>
+                <td></td>
+                <td>In Active</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
           </table>
+
+          <!-- ?Pagination -->
+          <!-- <div id="pagination">
+            <a href="#" class="btn">
+              <span class="material-icons">
+                navigate_before
+              </span>
+            </a>
+            <a href="#" class="btn">
+              1
+            </a>
+            <a href="#" class="btn">
+              2
+            </a>
+            <a href="#" class="btn active">
+              3
+            </a>
+        
+            <span class="material-icons">
+              more_horiz
+            </span>
+            <a href="#" class="btn">50</a>
+            <a href="#" class="btn">
+              <span class="material-icons">
+                navigate_next
+              </span>
+            </a>
+          </div> -->
         </div>
       </div>
       <!-- ? end of product listing -->
@@ -327,19 +393,30 @@
     <script>
       $(".view-opt").click(onClick);
 
+      //Change table
       function onClick(e) {
         let viewOpt = e.target;
         if (e.target.tagName === "SPAN") {
           viewOpt = viewOpt.parentNode;
         }
         const viewOpts = document.querySelectorAll(".view-opt");
+        const tbody = document.querySelectorAll("tbody");
         if (!viewOpt.classList[1]) {
           viewOpts.forEach((item) => {
             item.classList.remove("active");
           });
+          tbody.forEach((item) => {
+            item.style.display = "none";
+            if (item.id === viewOpt.getAttribute("data-table")) {
+              item.style.display = "table-row-group";
+            }
+          });
+          console.log(viewOpt.getAttribute("data-table"));
           viewOpt.classList.add("active");
         }
       }
+
+      // checkbox action
       $('input[name="all-check"]').click(() => {
         if ($('input[name="all-check"]').prop("checked") === true) {
           $('input[name^="check"]').prop("checked", true);
