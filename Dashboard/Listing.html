@@ -147,7 +147,7 @@
             </select>
           </div>
           <div class="form-group search-bar">
-            <input type="text" name="search" placeholder="Search" />
+            <input type="search" name="search" placeholder="Search" />
             <button type="submit" class="btn btn-search">
               <span class="material-icons">
                 search
@@ -169,59 +169,30 @@
             <li class="view-opt active" data-table="all">All</li>
             <li class="view-opt" data-table="live">Live</li>
             <li class="view-opt" data-table="outOfStock">
-              <span>Out-of-Stock</span>
+              Out-of-Stock
             </li>
             <li class="view-opt" data-table="inActive">In-Active</li>
           </ul>
-          <div class="form-inline sorting">
-            <label for="sort">Sort by: </label>
-            <select name="sort" id="sort" class="form-control">
-              <option value="Newest">Newest</option>
-              <option value="Oldest">Oldest</option>
-            </select>
-          </div>
         </div>
         <div class="listing-table">
           <table class="table">
             <thead>
               <tr>
-                <th>
-                  <label for="all-check" class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      name="all-check"
-                      id="all-check"
-                    />
-                    <div class="check-marker"></div>
-                  </label>
-                </th>
                 <th></th>
                 <th>Product Information</th>
                 <th>Listing Information</th>
                 <th></th>
-                <th>Status</th>
+                <th>Active</th>
                 <th></th>
               </tr>
             </thead>
             <tbody id="all">
               <tr>
                 <td>
-                  <label for="check-1" class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      name="check-1"
-                      id="check-1"
-                    />
-                    <div class="check-marker"></div>
-                  </label>
-                </td>
-                <td>
                   <img src="../static/images/laptop.jpg" alt="" />
                 </td>
                 <td>
-                  <p class="product-title ellipsis" data-maxlength="80">
+                  <p class="product-title ellipsis" data-maxlength="120">
                     Lenovo Flex 14 2-in-1 Convertible Laptop, 14 Inch FHD
                     Touchscreen Display, AMD Ryzen 5 3500U Processor, 12GB DDR4
                     RAM, 256GB NVMe SSD, Windows 10, 81SS000DUS, Black, Pen
@@ -245,204 +216,35 @@
                   <p><span class="label-text">Return Accepted: </span>Yes</p>
                 </td>
                 <td class="text-center">
-                  <div class="status-block">
-                    <button class="btn btn-status">Make In-Active</button>
-                    <div class="active">
-                      <p>Item is Active</p>
-                    </div>
+                  <div>
+                    <label class="switch">
+                      <input
+                        type="checkbox"
+                        class="activeCheck"
+                        data-href="#Request_link_Here"
+                      />
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </td>
                 <td class="text-center">
-                  <form action="google.com">
-                    <input
-                      type="submit"
-                      value="delete"
-                      class="material-icons btn delete"
-                    />
-                  </form>
-                  <a href="#" class="btn">
-                    <span class="material-icons">
-                      edit
-                    </span>
-                  </a>
+                  <div>
+                    <form action="google.com">
+                      <input
+                        type="submit"
+                        value="delete"
+                        class="material-icons btn delete"
+                      />
+                    </form>
+                    <a href="#" class="btn">
+                      <span class="material-icons">
+                        edit
+                      </span>
+                    </a>
+                  </div>
                   <!-- <span class="material-icons">
                     more_vert
                   </span> -->
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="check-2" class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      name="check-2"
-                      id="check-2"
-                    />
-                    <div class="check-marker"></div>
-                  </label>
-                </td>
-                <td>
-                  <img src="../static/images/op8.jpg" alt="" />
-                </td>
-                <td>
-                  <p class="product-title ellipsis" data-maxlength="80">
-                    Oneplus 8 White 128GB Rom 8GB Ram
-                  </p>
-                  <p class="product-id">
-                    <span class="label-text">Product Id: </span>123456789
-                  </p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Selling Price: </span>Rs.34,0000
-                  </p>
-                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
-                  <p><span class="label-text">Quantity: </span>100 pcs</p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Days to Dispatch: </span>10 day
-                  </p>
-                  <p><span class="label-text">Return Accepted: </span>Yes</p>
-                </td>
-                <td class="text-center">
-                  <div class="status-block">
-                    <button class="btn btn-status">Make Active</button>
-                    <div>
-                      <p>Item is In-Active</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-center">
-                  <form action="google.com">
-                    <input
-                      type="submit"
-                      value="delete"
-                      class="material-icons btn delete"
-                    />
-                  </form>
-                  <a href="#" class="btn">
-                    <span class="material-icons">
-                      edit
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="check-2" class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      name="check-2"
-                      id="check-2"
-                    />
-                    <div class="check-marker"></div>
-                  </label>
-                </td>
-                <td>
-                  <img src="../static/images/op8.jpg" alt="" />
-                </td>
-                <td>
-                  <p class="product-title ellipsis" data-maxlength="80">
-                    Oneplus 8 White 128GB Rom 8GB Ram
-                  </p>
-                  <p class="product-id">
-                    <span class="label-text">Product Id: </span>123456789
-                  </p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Selling Price: </span>Rs.34,0000
-                  </p>
-                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
-                  <p><span class="label-text">Quantity: </span>100 pcs</p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Days to Dispatch: </span>10 day
-                  </p>
-                  <p><span class="label-text">Return Accepted: </span>Yes</p>
-                </td>
-                <td class="text-center">
-                  <div class="status-block">
-                    <div class="message-reject">
-                      <p>Rejected due to Long Dispatct Days</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-center">
-                  <form action="google.com">
-                    <input
-                      type="submit"
-                      value="delete"
-                      class="material-icons btn delete"
-                    />
-                  </form>
-                  <a href="#" class="btn">
-                    <span class="material-icons">
-                      edit
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="check-2" class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      name="check-2"
-                      id="check-2"
-                    />
-                    <div class="check-marker"></div>
-                  </label>
-                </td>
-                <td>
-                  <img src="../static/images/op8.jpg" alt="" />
-                </td>
-                <td>
-                  <p class="product-title ellipsis" data-maxlength="80">
-                    Oneplus 8 White 128GB Rom 8GB Ram
-                  </p>
-                  <p class="product-id">
-                    <span class="label-text">Product Id: </span>123456789
-                  </p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Selling Price: </span>Rs.34,0000
-                  </p>
-                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
-                  <p><span class="label-text">Quantity: </span>100 pcs</p>
-                </td>
-                <td>
-                  <p>
-                    <span class="label-text">Days to Dispatch: </span>10 day
-                  </p>
-                  <p><span class="label-text">Return Accepted: </span>Yes</p>
-                </td>
-                <td class="text-center">
-                  <div class="status-block">
-                    <div class="message">
-                      <p>The Listing item is pending approval</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-center">
-                  <form action="google.com">
-                    <input
-                      type="submit"
-                      value="delete"
-                      class="material-icons btn delete"
-                    />
-                  </form>
-                  <a href="#" class="btn">
-                    <span class="material-icons">
-                      edit
-                    </span>
-                  </a>
                 </td>
               </tr>
             </tbody>
@@ -480,34 +282,6 @@
               </tr>
             </tbody>
           </table>
-
-          <!-- ?Pagination -->
-          <!-- <div id="pagination">
-            <a href="#" class="btn">
-              <span class="material-icons">
-                navigate_before
-              </span>
-            </a>
-            <a href="#" class="btn">
-              1
-            </a>
-            <a href="#" class="btn">
-              2
-            </a>
-            <a href="#" class="btn active">
-              3
-            </a>
-        
-            <span class="material-icons">
-              more_horiz
-            </span>
-            <a href="#" class="btn">50</a>
-            <a href="#" class="btn">
-              <span class="material-icons">
-                navigate_next
-              </span>
-            </a>
-          </div> -->
         </div>
       </div>
       <!-- ? end of product listing -->
@@ -518,9 +292,7 @@
       //Change table
       function onClick(e) {
         let viewOpt = e.target;
-        if (e.target.tagName === "SPAN") {
-          viewOpt = viewOpt.parentNode;
-        }
+
         const viewOpts = document.querySelectorAll(".view-opt");
         const tbody = document.querySelectorAll("tbody");
         if (!viewOpt.classList[1]) {
@@ -537,22 +309,10 @@
           viewOpt.classList.add("active");
         }
       }
-
-      // checkbox action
-      $('input[name="all-check"]').click(() => {
-        if ($('input[name="all-check"]').prop("checked") === true) {
-          $('input[name^="check"]').prop("checked", true);
-        } else if ($('input[name="all-check"]').prop("checked") === false) {
-          $('input[name^="check"]').prop("checked", false);
-        }
-      });
-      $('input[name^="check"]').click((e) => {
-        if (
-          $(`#${e.target.id}`).prop("checked") === false &&
-          $('input[name="all-check"]').prop("checked") === true
-        ) {
-          $('input[name="all-check"]').prop("checked", false);
-        }
+      $(".activeCheck").click(() => {
+        var activeCheck = new XMLHttpRequest();
+        activeCheck.open("GET", $(".activeCheck").attr("data-href"), true);
+        activeCheck.send();
       });
     </script>
 
