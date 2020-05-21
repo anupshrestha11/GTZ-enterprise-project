@@ -95,8 +95,19 @@
               width: 10%;
               img {
                 width: 100%;
+                height: 100px;
                 object-fit: contain;
               }
+            }
+            &:nth-of-type(3) {
+              width: 20%;
+            }
+            &:nth-of-type(6) {
+              width: 200px;
+            }
+            &:nth-of-type(7) {
+              width: auto;
+              padding: 10px;
             }
             p {
               font-size: 90%;
@@ -114,6 +125,35 @@
       #inActive {
         display: none;
       }
+
+      .status-block {
+        border: 1px solid #0a5693;
+        border-radius: 20px 5px 20px 5px;
+        overflow: hidden;
+        padding: 0;
+        .btn-status {
+          margin: 10px auto;
+        }
+        div {
+          background-color: #ff9900;
+          color: #fff;
+          p {
+            margin: 0;
+            padding: 10px;
+          }
+          &.active {
+            background-color: rgb(80, 240, 106);
+            color: black;
+          }
+          &.message {
+            background-color: #0a5693;
+          }
+          &.message-reject {
+            background-color: rgba(255, 0, 0, 0.8);
+          }
+        }
+      }
+
       //? checkbox-style
       .checkbox-container {
         display: flex;
