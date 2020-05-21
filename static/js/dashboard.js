@@ -30,12 +30,20 @@ $(".delete").click((e) => {
 });
 
 const ellipsis = (item) => {
-  $(`.${item}`).html((index, currentText) => {
-    let maxLength = $(`.${item}`).attr("data-maxlength");
+  document.querySelectorAll(`.${item}`).forEach((currentItem) => {
+    //  $(`.${item}`).html((index, currentText) => {
+    //    let maxLength = $(`.${item}`).attr("data-maxlength");
+    //
+    //  });
+
+    let currentText = currentItem.textContent;
+    let maxLength = currentItem.getAttribute("data-maxlength");
+    console.log(currentText);
+    console.log(maxLength);
     if (currentText.length >= maxLength) {
-      return currentText.substr(0, maxLength) + "...";
+      currentItem.textContent = currentText.substr(0, maxLength) + "...";
     } else {
-      return currentText;
+      currentItem.textContent = currentText;
     }
   });
 };
@@ -73,17 +81,8 @@ const formData = {
 
 //? product dimension check disable attribute
 formData.productDimensionType.addEventListener("change", () => {
-  const dimension = [
-    formData.productDimension.length,
-    formData.productDimension.breadth,
-    formData.productDimension.height,
-  ];
-  if (
-    formData.productDimensionType.value === null ||
-    formData.productDimensionType.value === undefined ||
-    formData.productDimensionType.value === "" ||
-    formData.productDimensionType.value === "0"
-  ) {
+  const dimension = [formData.productDimension.length, formData.productDimension.breadth, formData.productDimension.height];
+  if (formData.productDimensionType.value === null || formData.productDimensionType.value === undefined || formData.productDimensionType.value === "" || formData.productDimensionType.value === "0") {
     dimension.forEach((item) => {
       item.disabled = true;
     });
@@ -99,12 +98,7 @@ formData.productDimensionType.addEventListener("change", () => {
 });
 //?Quantity select option check for input
 formData.quantityType.addEventListener("change", () => {
-  if (
-    formData.quantityType.value === null ||
-    formData.quantityType.value === undefined ||
-    formData.quantityType.value === "" ||
-    formData.quantityType.value === 0
-  ) {
+  if (formData.quantityType.value === null || formData.quantityType.value === undefined || formData.quantityType.value === "" || formData.quantityType.value === 0) {
     formData.quantity.disabled = true;
   } else {
     formData.quantity.disabled = false;
@@ -128,12 +122,7 @@ const validateProductForm = (e) => {
     return false;
   };
   const checkSelect = (name) => {
-    if (
-      name.value === null ||
-      name.value === undefined ||
-      name.value === "" ||
-      name.value === "0"
-    ) {
+    if (name.value === null || name.value === undefined || name.value === "" || name.value === "0") {
       name.focus();
       name.style.boxShadow = "none";
       name.style.border = "1px solid red";
@@ -142,25 +131,14 @@ const validateProductForm = (e) => {
   };
   const errorMsg = () => {
     e.preventDefault();
-    document.querySelector(".error-msg").textContent =
-      "All Fields Indicated '*' Must Be Filled";
+    document.querySelector(".error-msg").textContent = "All Fields Indicated '*' Must Be Filled";
     document.querySelector(".error-msg").classList.add("alert");
     document.querySelector(".error-msg").classList.add("alert-danger");
     document.querySelector(".error-msg").classList.add("text-center");
   };
-  if (
-    checknull(formData.productName) ||
-    checkSelect(formData.category) ||
-    checknull(formData.sku) ||
-    checknull(formData.highlight) ||
-    checknull(formData.description) ||
-    checknull(formData.sellingPrice) ||
-    checknull(formData.daysToDispatch) ||
-    checkSelect(formData.status)
-  ) {
+  if (checknull(formData.productName) || checkSelect(formData.category) || checknull(formData.sku) || checknull(formData.highlight) || checknull(formData.description) || checknull(formData.sellingPrice) || checknull(formData.daysToDispatch) || checkSelect(formData.status)) {
     e.preventDefault();
-    document.querySelector(".error-msg").textContent =
-      "All Fields Indicated '*' Must Be Filled";
+    document.querySelector(".error-msg").textContent = "All Fields Indicated '*' Must Be Filled";
     document.querySelector(".error-msg").classList.add("alert");
     document.querySelector(".error-msg").classList.add("alert-danger");
     document.querySelector(".error-msg").classList.add("text-center");
