@@ -255,6 +255,7 @@ aside {
 //? section main
 section.main {
   grid-area: main;
+  position: relative;
 }
 
 //? Breakpoints for responsive design

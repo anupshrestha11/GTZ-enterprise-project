@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard | GTZ Online Shop</title>
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../static/images/GTZ-logo.png"
+    />
+    <!--? bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--? bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--? material icons link  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- ? custom css for dashboard -->
+    <link rel="stylesheet" href="../static/css/AdminDashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="../static/images/profile_picture.png"
+          class="profile-picture"
+          alt=""
+        />
+        <div class="profile-detail">
+          <h5>John Doe <small>(Admin)</small></h5>
+          <small>johndoe@gmail.com</small>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="material-icons notification">
+          notifications_none
+          <sup></sup>
+        </span>
+
+        <a href="#" class="btn btn-danger btn-logout">
+          <span class="logout-text">Logout</span>
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+      </div>
+    </header>
+    <aside>
+      <nav>
+        <div class="btn-toggle-menu">
+          <span class="material-icons">
+            menu
+          </span>
+          <img
+            src="../static/images/GTZ-logo.png"
+            class="logo"
+            alt="GTZ logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="Dashboard.html" class="nav-item btn">
+              <span class="material-icons">
+                dashboard
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./users.html" class="nav-item btn">
+              <span class="material-icons">
+                people
+              </span>
+              <span class="nav-text">Users</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="./Category.html" class="nav-item btn">
+              <span class="material-icons">
+                book
+              </span>
+              <span class="nav-text">Category</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                account_circle
+              </span>
+              <span class="nav-text">Products</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                card_giftcard
+              </span>
+              <span class="nav-text">Coupons</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="main text-justify">
+      <div class="container-fluid categories">
+        <h3 class="text-center">
+          Manage Product Category
+        </h3>
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-warning">
+              <span class="material-icons">add</span>Category
+            </button>
+          </div>
+          <ul class="category-list">
+            <li class="category">
+              <p class="category-name">
+                this is main 1 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 1</li>
+                <li class="sub-category-name">this is sub 2 of main 1</li>
+                <li class="sub-category-name">this is sub 3 of main 1</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 2 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 2</li>
+                <li class="sub-category-name">this is sub 2 of main 2</li>
+                <li class="sub-category-name">this is sub 3 of main 2</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 3 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 3</li>
+                <li class="sub-category-name">this is sub 2 of main 3</li>
+                <li class="sub-category-name">this is sub 3 of main 3</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 4 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 4</li>
+                <li class="sub-category-name">this is sub 2 of main 4</li>
+                <li class="sub-category-name">this is sub 3 of main 4</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 5 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 5</li>
+                <li class="sub-category-name">this is sub 2 of main 5</li>
+                <li class="sub-category-name">this is sub 3 of main 5</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 6 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 6</li>
+                <li class="sub-category-name">this is sub 2 of main 6</li>
+                <li class="sub-category-name">this is sub 3 of main 6</li>
+              </ul>
+            </li>
+            <li class="category">
+              <p class="category-name">
+                this is main 7 <span class="material-icons">expand_more</span>
+              </p>
+              <ul class="sub-category">
+                <li class="sub-category-name">this is sub 1 of main 7</li>
+                <li class="sub-category-name">this is sub 2 of main 7</li>
+                <li class="sub-category-name">this is sub 3 of main 7</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>

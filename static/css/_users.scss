@@ -1,0 +1,51 @@
+section.main {
+  .table {
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    td {
+      a {
+        color: #000;
+        span.material-icons {
+          color: red;
+          font-size: 30px;
+        }
+        &:hover {
+          span.material-icons {
+            color: rgb(144, 1, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section.main {
+    .table {
+      font-size: 85%;
+      thead {
+        display: none;
+      }
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100vw;
+      }
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: auto 50px;
+        &:nth-of-type(5) {
+          justify-content: center;
+        }
+        &::before {
+          content: attr(data-name);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

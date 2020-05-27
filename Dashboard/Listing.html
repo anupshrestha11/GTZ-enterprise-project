@@ -42,7 +42,7 @@
     />
 
     <!-- ? custom css for dashboard -->
-    <link rel="stylesheet" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" href="../static/css/VendorDashboard.css" />
   </head>
   <body>
     <header>
@@ -187,6 +187,66 @@
               </tr>
             </thead>
             <tbody id="all">
+              <tr>
+                <td>
+                  <img src="../static/images/laptop.jpg" alt="" />
+                </td>
+                <td>
+                  <p class="product-title ellipsis" data-maxlength="80">
+                    Lenovo Flex 14 2-in-1 Convertible Laptop, 14 Inch FHD
+                    Touchscreen Display, AMD Ryzen 5 3500U Processor, 12GB DDR4
+                    RAM, 256GB NVMe SSD, Windows 10, 81SS000DUS, Black, Pen
+                    Included 4.4 out of 5 stars 1,439
+                  </p>
+                  <p class="product-id">
+                    <span class="label-text">Sku Id: </span>123456789
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Selling Price: </span>Rs.34,0000
+                  </p>
+                  <p><span class="label-text">MRP: </span>Rs.34,0000</p>
+                  <p><span class="label-text">Quantity: </span>100 pcs</p>
+                </td>
+                <td>
+                  <p>
+                    <span class="label-text">Days to Dispatch: </span>10 day
+                  </p>
+                  <p><span class="label-text">Return Accepted: </span>Yes</p>
+                </td>
+                <td class="text-center">
+                  <div>
+                    <label class="switch">
+                      <input
+                        type="checkbox"
+                        class="activeCheck"
+                        data-href="google"
+                      />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </td>
+                <td class="text-center">
+                  <div>
+                    <form action="google.com">
+                      <input
+                        type="submit"
+                        value="delete"
+                        class="material-icons btn delete"
+                      />
+                    </form>
+                    <a href="#" class="btn">
+                      <span class="material-icons">
+                        edit
+                      </span>
+                    </a>
+                  </div>
+                  <!-- <span class="material-icons">
+                    more_vert
+                  </span> -->
+                </td>
+              </tr>
               <tr>
                 <td>
                   <img src="../static/images/laptop.jpg" alt="" />
@@ -501,6 +561,29 @@
           </table>
         </div>
       </div>
+      <div class="pagination-div">
+        <ul class="paginations">
+          <li>
+            <a href="#">
+              <span class="material-icons">
+                navigate_before
+              </span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#">
+              <span class="material-icons">
+                navigate_next
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <!-- ? end of product listing -->
     </section>
     <script>
@@ -509,7 +592,6 @@
       //Change table
       function onClick(e) {
         let viewOpt = e.target;
-
         const viewOpts = document.querySelectorAll(".view-opt");
         const tbody = document.querySelectorAll("tbody");
         if (!viewOpt.classList[1]) {

@@ -42,7 +42,7 @@
     />
 
     <!-- ? custom css for dashboard -->
-    <link rel="stylesheet" href="../static/css/VendorDashboard.css" />
+    <link rel="stylesheet" href="../static/css/AdminDashboard.css" />
   </head>
   <body>
     <header>
@@ -53,7 +53,7 @@
           alt=""
         />
         <div class="profile-detail">
-          <h5>John Doe</h5>
+          <h5>John Doe <small>(Admin)</small></h5>
           <small>johndoe@gmail.com</small>
         </div>
       </div>
@@ -84,7 +84,7 @@
           />
         </div>
         <ul class="nav-links">
-          <li class="active">
+          <li>
             <a href="Dashboard.html" class="nav-item btn">
               <span class="material-icons">
                 dashboard
@@ -93,20 +93,20 @@
             </a>
           </li>
 
-          <li class="">
-            <a href="Listing.html" class="nav-item btn">
+          <li class="active">
+            <a href="./users.html" class="nav-item btn">
               <span class="material-icons">
-                shop
+                people
               </span>
-              <span class="nav-text">Listing</span>
+              <span class="nav-text">Users</span>
             </a>
           </li>
           <li>
-            <a href="./orders.html" class="nav-item btn">
+            <a href="./Category.html" class="nav-item btn">
               <span class="material-icons">
                 book
               </span>
-              <span class="nav-text">Orders</span>
+              <span class="nav-text">Category</span>
             </a>
           </li>
           <li>
@@ -114,7 +114,7 @@
               <span class="material-icons">
                 account_circle
               </span>
-              <span class="nav-text">Profile</span>
+              <span class="nav-text">Products</span>
             </a>
           </li>
           <li>
@@ -131,88 +131,76 @@
 
     <section class="main text-justify">
       <div class="container">
-        <h3 class="text-center">Welcome to GTZ Online Shop</h3>
-        <div class="charts">
-          <div class="chart-box">
-            <canvas id="chart1"></canvas>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart2"></canvas>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart3"></canvas>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart4"></canvas>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart5"></canvas>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart6"></canvas>
-          </div>
+        <h3 class="text-center">Manage Users</h3>
+        <div class="row">
+          <table class="col-12 table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contant</th>
+                <th>No. of Products</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-name="Name">Mary Doe</td>
+                <td data-name="Email">Marydoe@gmail.com</td>
+                <td data-name="Contant">9849######</td>
+                <td data-name="No. of Products">120</td>
+                <td>
+                  <a href="#">
+                    <span class="material-icons">
+                      delete
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-name="Name">Mary Doe</td>
+                <td data-name="Email">Marydoe@gmail.com</td>
+                <td data-name="Contant">9849######</td>
+                <td data-name="No. of Products">120</td>
+                <td>
+                  <a href="#">
+                    <span class="material-icons">
+                      delete
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-name="Name">Mary Doe</td>
+                <td data-name="Email">Marydoe@gmail.com</td>
+                <td data-name="Contant">9849######</td>
+                <td data-name="No. of Products">120</td>
+                <td>
+                  <a href="#">
+                    <span class="material-icons">
+                      delete
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-name="Name">Mary Doe</td>
+                <td data-name="Email">Marydoe@gmail.com</td>
+                <td data-name="Contant">9849######</td>
+                <td data-name="No. of Products">120</td>
+                <td>
+                  <a href="#">
+                    <span class="material-icons">
+                      delete
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
-
-    <!-- ! Chart style and script -->
-    <style>
-      .charts {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      .chart-box {
-        width: 350px;
-      }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script>
-      const chart = (item, type, index) => {
-        let myChart = document.getElementById(item).getContext("2d");
-
-        Chart.defaults.global.defaultFontFamily = "Lato";
-        Chart.defaults.global.defaultFontSize = 12;
-        Chart.defaults.global.defaultFontColor = "#777";
-        Chart.defaults.global.defaultBackgroudColor = "transparent";
-
-        let chartDetail = new Chart(myChart, {
-          type: type,
-          data: {
-            labels: ["Shoes", "SmartPhone", "Dress", "Laptop"],
-            datasets: [
-              {
-                label: "Sales",
-                data: [25000, 30000, 20000, 35000],
-                backgroundColor: ["green", "red", "blue", "orchid"],
-                // borderColor: "#000",
-              },
-            ],
-          },
-          options: {
-            title: {
-              display: true,
-              text: `Chart No #${index}`,
-              fontSize: 16,
-            },
-            legend: {
-              display: true,
-              position: "right",
-              labels: {
-                fontColor: "#000",
-              },
-            },
-          },
-        });
-      };
-      chart("chart1", "pie", 1);
-      chart("chart2", "doughnut", 2);
-      chart("chart3", "horizontalBar", 3);
-      chart("chart4", "polarArea", 4);
-      chart("chart5", "bar", 5);
-      chart("chart6", "line", 6);
-    </script>
-    <!-- ! end of chart ss -->
     <script src="../static/js/dashboard.js"></script>
   </body>
 </html>
