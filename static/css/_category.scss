@@ -1,50 +1,18 @@
 section.main {
   .categories {
     .btn {
+      padding: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
-      border-radius: 3px 10px 3px 10px;
-      margin: 10px auto;
-      padding: 10px 20px;
-    }
-    ul {
-      li {
-        padding-left: 25px;
-      }
-    }
-
-    .category-list {
-      display: grid;
-      width: 100%;
-      flex-wrap: wrap;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      .category {
-        padding: 10px 20px;
-        user-select: none;
-        p.category-name {
-          background-color: #533caa;
-          margin: 0;
-          padding: 10px 20px;
-          color: #fff;
-          display: flex;
-          justify-content: space-between;
-          border-radius: 5px;
-        }
-
-        .sub-category {
-            display: none;
-          li {
-            display: block;
-            line-height: 1.5em;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid;
-            &:last-of-type {
-              border-bottom: transparent;
-            }
-          }
-        }
+      height: 35px;
+      line-height: 1.5em;
+      overflow: hidden;
+      padding: 5px 10px;
+      background-color: rgb(5, 170, 5);
+      color: #fff;
+      margin: 20px 10px;
+      span.add {
+        font-size: 28px;
       }
     }
   }

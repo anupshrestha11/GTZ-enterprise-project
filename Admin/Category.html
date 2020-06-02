@@ -130,91 +130,155 @@
     </aside>
 
     <section class="main text-justify">
-      <div class="container-fluid categories">
+      <div class="container">
         <h3 class="text-center">
           Manage Product Category
         </h3>
-        <div class="row">
+        <div class="row categories">
           <div class="col-12">
-            <button class="btn btn-warning">
-              <span class="material-icons">add</span>Category
+            <button
+              class="btn btn-add"
+              data-toggle="modal"
+              data-target="#addCategoryModal"
+            >
+              <span class="add">+</span>New
             </button>
           </div>
-          <ul class="category-list">
-            <li class="category">
-              <p class="category-name">
-                this is main 1 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 1</li>
-                <li class="sub-category-name">this is sub 2 of main 1</li>
-                <li class="sub-category-name">this is sub 3 of main 1</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 2 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 2</li>
-                <li class="sub-category-name">this is sub 2 of main 2</li>
-                <li class="sub-category-name">this is sub 3 of main 2</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 3 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 3</li>
-                <li class="sub-category-name">this is sub 2 of main 3</li>
-                <li class="sub-category-name">this is sub 3 of main 3</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 4 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 4</li>
-                <li class="sub-category-name">this is sub 2 of main 4</li>
-                <li class="sub-category-name">this is sub 3 of main 4</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 5 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 5</li>
-                <li class="sub-category-name">this is sub 2 of main 5</li>
-                <li class="sub-category-name">this is sub 3 of main 5</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 6 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 6</li>
-                <li class="sub-category-name">this is sub 2 of main 6</li>
-                <li class="sub-category-name">this is sub 3 of main 6</li>
-              </ul>
-            </li>
-            <li class="category">
-              <p class="category-name">
-                this is main 7 <span class="material-icons">expand_more</span>
-              </p>
-              <ul class="sub-category">
-                <li class="sub-category-name">this is sub 1 of main 7</li>
-                <li class="sub-category-name">this is sub 2 of main 7</li>
-                <li class="sub-category-name">this is sub 3 of main 7</li>
-              </ul>
-            </li>
-          </ul>
+          <div class="category-listing col-12">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>s/n</th>
+                  <th>Category Name</th>
+                  <th>Products</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-name="s/n:">1</td>
+                  <td data-name="Category Name:">Desktop</td>
+                  <td data-name="Products">1200</td>
+                  <td>
+                    <a href="" class="btn-edit"
+                      ><span class="material-icons">edit</span></a
+                    >
+                    <a href="" class="btn-delete"
+                      ><span class="material-icons">delete</span></a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="s/n:">2</td>
+                  <td data-name="Category Name:">Desktop</td>
+                  <td data-name="Products">1200</td>
+                  <td>
+                    <a href="" class="btn-edit"
+                      ><span class="material-icons">edit</span></a
+                    >
+                    <a href="" class="btn-delete"
+                      ><span class="material-icons">delete</span></a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="s/n:">3</td>
+                  <td data-name="Category Name:">Desktop</td>
+                  <td data-name="Products">1200</td>
+                  <td>
+                    <a href="" class="btn-edit"
+                      ><span class="material-icons">edit</span></a
+                    >
+                    <a href="" class="btn-delete"
+                      ><span class="material-icons">delete</span></a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="s/n:">4</td>
+                  <td data-name="Category Name:">Desktop</td>
+                  <td data-name="Products">1200</td>
+                  <td>
+                    <a href="" class="btn-edit"
+                      ><span class="material-icons">edit</span></a
+                    >
+                    <a href="" class="btn-delete"
+                      ><span class="material-icons">delete</span></a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ? add category modal -->
+      <div class="modal fade" tabindex="-1" role="dialog" id="addCategoryModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <!-- ? add category form -->
+            <form action="#" class="form" method="POST">
+              <div class="modal-header">
+                <h5 class="modal-title">Category</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="category">Category</label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="category"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary" value="Submit" />
+
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
     <script src="../static/js/dashboard.js"></script>
+
+    <script>
+      $(".btn-edit").on("click", function (event) {
+        event.preventDefault();
+        $(".modal-title").text("Edit Category");
+        $("input[type='submit']").val("Update");
+        $("#addCategoryModal").modal();
+      });
+
+      $(".btn-add").on("click", function (event) {
+        event.preventDefault();
+        $(".modal-title").text("Add Category");
+        $("#category").val("");
+        $("input[type='submit']").val("Add");
+        $("#addCategoryModal").modal();
+      });
+      $(".btn-delete").on("click", (e) => {
+        if (!confirm("Do you want to delete")) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>

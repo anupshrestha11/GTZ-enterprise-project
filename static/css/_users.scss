@@ -6,14 +6,28 @@ section.main {
     line-height: 1.5em;
     td {
       a {
-        color: #000;
-        span.material-icons {
-          color: red;
-          font-size: 30px;
-        }
-        &:hover {
+        &.btn-delete {
+          color: #000;
           span.material-icons {
-            color: rgb(144, 1, 1);
+            color: red;
+            font-size: 30px;
+          }
+          &:hover {
+            span.material-icons {
+              color: rgb(173, 4, 4);
+            }
+          }
+        }
+        &.btn-edit {
+          color: #000;
+          span.material-icons {
+            color: orange;
+            font-size: 30px;
+          }
+          &:hover {
+            span.material-icons {
+              color: rgb(182, 120, 4);
+            }
           }
         }
       }
@@ -35,11 +49,14 @@ section.main {
         width: 100vw;
       }
       td {
+        padding: 0.75em 3em;
         display: flex;
         justify-content: space-between;
-        padding: auto 50px;
-        &:nth-of-type(5) {
+        &:last-of-type {
           justify-content: center;
+          span.material-icons {
+            margin: auto 30px;
+          }
         }
         &::before {
           content: attr(data-name);

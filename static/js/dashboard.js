@@ -58,4 +58,4 @@ const categoryDropDown = (e) => {
   }
 };
 
-$(".category-name").click(categoryDropDown);
+// $(".category-name").click(categoryDropDown);
