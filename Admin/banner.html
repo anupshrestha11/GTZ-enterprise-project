@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard | GTZ Online Shop</title>
+    <!-- ? favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../static/images/GTZ-logo.png"
+    />
+    <!--? bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--? bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--? material icons link  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- ? custom css for dashboard -->
+    <link rel="stylesheet" href="../static/css/AdminDashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="../static/images/profile_picture.png"
+          class="profile-picture"
+          alt=""
+        />
+        <div class="profile-detail">
+          <h5>John Doe <small>(Admin)</small></h5>
+          <small>johndoe@gmail.com</small>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="material-icons notification">
+          notifications_none
+          <sup></sup>
+        </span>
+
+        <a href="#" class="btn btn-danger btn-logout">
+          <span class="logout-text">Logout</span>
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+      </div>
+    </header>
+    <aside>
+      <nav>
+        <div class="btn-toggle-menu">
+          <span class="material-icons">
+            menu
+          </span>
+          <img
+            src="../static/images/GTZ-logo.png"
+            class="logo"
+            alt="GTZ logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="Dashboard.html" class="nav-item btn">
+              <span class="material-icons">
+                dashboard
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="">
+            <a href="./users.html" class="nav-item btn">
+              <span class="material-icons">
+                people
+              </span>
+              <span class="nav-text">Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Category.html" class="nav-item btn">
+              <span class="material-icons">
+                book
+              </span>
+              <span class="nav-text">Category</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                account_circle
+              </span>
+              <span class="nav-text">Products</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item btn">
+              <span class="material-icons">
+                card_giftcard
+              </span>
+              <span class="nav-text">Coupons</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="main text-justify">
+      <div class="container">
+        <h3 class="text-center">Manage Banner</h3>
+        <div class="form">
+          <form action="#" method="" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="image" class="font-weight-bold"
+                >Upload Banner:
+              </label>
+              <input
+                type="file"
+                name="image"
+                id="image"
+                multiple
+                accept="image/jpeg, image/png"
+                class="form-control-file"
+              />
+              <input type="submit" value="Upload" class="my-3" />
+            </div>
+          </form>
+        </div>
+        <div class="banners">
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/electronics.png" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-info m-1">In-Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+          <div class="banner-item">
+            <img src="../static/images/banner1.jpg" alt="" />
+            <div
+              class="action my-2 d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="btn btn-success m-1">Active</a>
+              <a href="#" class="btn btn-danger btn-delete m-1">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>

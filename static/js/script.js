@@ -58,7 +58,6 @@ const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-item");
-
   //?toggle nav
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -72,10 +71,23 @@ const navSlide = () => {
         }s`;
       }
     });
-
     //?burger animation
     burger.classList.toggle("toggle");
   });
 };
 
 navSlide();
+
+const ellipsis = (item) => {
+  document.querySelectorAll(`.${item}`).forEach((currentItem) => {
+    let currentText = currentItem.textContent;
+    let maxLength = currentItem.getAttribute("data-maxlength");
+    if (currentText.length >= maxLength) {
+      currentItem.textContent = currentText.substr(0, maxLength) + "...";
+    } else {
+      currentItem.textContent = currentText;
+    }
+  });
+};
+
+ellipsis("ellipsis");

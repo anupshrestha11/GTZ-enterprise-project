@@ -102,10 +102,6 @@
           box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
-.products .product-listing .product-card:hover .img-box {
-  opacity: 0.4;
-}
-
 .products .product-listing .product-card .product-detail {
   font-size: 80%;
   line-height: 1.5em;
