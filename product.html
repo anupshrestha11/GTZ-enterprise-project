@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTZ Online Shop</title>
+    <title>GTZ Online Shop | Product Title</title>
 
     <!-- ? favicon -->
     <link
@@ -100,13 +100,13 @@
         <span class="material-icons favorite-icon">
           favorite
         </span>
-        <sup class="">12</sup>
+        <sup class="" id="favoriteItems">12</sup>
       </button>
       <button class="btn">
         <span class="material-icons shopping-cart-icon">
           shopping_cart
         </span>
-        <sup class="">13</sup>
+        <sup class="" id="cartItems">13</sup>
       </button>
       <ul class="nav-links">
         <li class="nav-item"><a href="#" class="btn">FAQ</a></li>
@@ -191,14 +191,16 @@
           </h3>
           <p>by <a href="#">Seller-name</a></p>
           <p class="rating">
-            <span class="material-icons">
+            <span class="material-icons display-rating" data-rating="3.5">
               star star star star_half star_outline
             </span>
             no rating
           </p>
           <div class="buttons-div">
-            <button class="btn btn-success">Add to Cart</button>
-            <button class="btn btn-success">Buy Now</button>
+            <a class="btn btn-info" id="btnAddToCart" href="google.com">
+              Add to Cart
+            </a>
+            <a class="btn btn-success text-white">Buy Now</a>
             <span class="material-icons favorite">
               favorite
             </span>
@@ -318,6 +320,9 @@
       href="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.17/css/jquery.ez-plus.css"
       media="screen"
     />
+
+    <script src="./static/js/cart.js"></script>
+
     <script>
       $(document).ready(function () {
         $("#productImage").ezPlus({

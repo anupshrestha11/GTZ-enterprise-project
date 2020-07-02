@@ -16,7 +16,7 @@
 // $(".image-item").click(changeImage);
 
 // ! 1000 is 1 sec
-$(document).ready(function () {
+function home() {
   //? Bootstrap Carousel
   $(".carousel").carousel({
     interval: 3000,
@@ -53,7 +53,7 @@ $(document).ready(function () {
       },
     },
   });
-});
+}
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
