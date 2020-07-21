@@ -1,0 +1,16 @@
+section.checkout {
+  .checkout-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    .delivery-details {
+      .form-group {
+        padding: 0 25px;
+        &:first-of-type {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

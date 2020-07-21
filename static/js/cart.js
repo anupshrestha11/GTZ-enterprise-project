@@ -17,6 +17,7 @@ const sendHttpRequest = (method, url) => {
       }
     };
     xhr.onerror = () => {
+
       reject("Something went wrong!!!");
     };
     xhr.send();
