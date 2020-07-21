@@ -117,8 +117,25 @@
       </button>
       <ul class="nav-links">
         <li class="nav-item"><a href="#" class="btn">FAQ</a></li>
-        <li class="nav-item"><a href="#" class="btn">Login</a></li>
+        <!-- <li class="nav-item"><a href="#" class="btn">Login</a></li> -->
         <li class="nav-item"><a href="#" class="btn">Sell</a></li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              John Doe
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item btn" href="#">Logout</a>
+            </div>
+          </div>
+        </li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -203,7 +220,7 @@
 
     <!-- ? start of category -->
     <section class="category container">
-      <div class="category-item">
+      <div class="category-item box">
         <div class="img-box">
           <img src="./static/images/clothing.png" alt="Clothing" />
         </div>
